@@ -1,0 +1,95 @@
+.main-title h1{
+    cursor: pointer;
+}
+.main-title img{
+    margin-top: 5px;
+}
+.main-title h1{
+    width: 400px;
+    padding-top:40px;
+    padding-left: 15px;
+    border-bottom: 4px #eb0000 solid;
+    cursor: pointer;
+}
+
+#main-subMenuDiv{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+
+.typesetting{
+    padding-top: 3px;
+    text-indent: 2em;
+}
+.main_question{
+    margin-left: 40px;
+}
+#frame_notice {
+    width: 100%;
+    padding-top:20px;
+    min-height: 500px;
+
+}
+
+h3{
+    cursor: pointer;
+}
+
+.slide{
+    margin:0 auto;
+    width:560px;
+
+}
+
+#slideshow {
+
+    margin:80px auto;
+    width:640px;
+    height:315px;
+    position:relative;
+    background-color: black;
+}
+#slideshow #slidesContainer{
+    margin:0px auto;
+    width:560px;
+    height:315px;
+    overflow:auto;
+    position:relative;
+}
+#slideshow #slidesContainer .slide{
+    margin:0 auto;
+    width:560px;
+    height:315px;
+}
+.control {
+    display:block;
+    width:40px;
+    height:315px;
+    position:absolute;
+    cursor: pointer;
+}
+#leftControl {
+    top:120px;
+    left:0;
+    background:transparent url(../img/back.png) no-repeat 0 0;
+}
+#rightControl {
+    top:120px;
+    right:0;
+    background:transparent url(../img/next.png) no-repeat 0 0;
+}
+#pageContainer {
+    margin:0 auto;
+    width:600px;
+}
+#pageContainer h1 {
+    display:block;
+    width:680px;
+}
+.video{
+
+    width:560px;
+
+}
+

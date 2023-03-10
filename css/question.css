@@ -1,0 +1,155 @@
+.main-title h1{
+    cursor: pointer;
+}
+body{
+    font-family: "Microsoft JhengHei";
+    background: #FFF3E0;
+}
+
+.main-title{
+    margin-left: 5px;
+}
+.main-title img, h2{
+
+    float: left;
+}
+.main-title h1{
+    padding-top:40px;
+    margin-right:350px;
+    border-bottom: 4px #eb0000 solid;
+    cursor: pointer;
+}
+#mainTitleDiv{
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right:10px;
+}
+#main-subMenuDiv{
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.nav-b{
+    position: relative;
+}
+.nav-b,.nav-b ul{
+    list-style: none;
+    margin: 0px;
+    margin:0px;
+}
+
+.nav-b  li{
+    float:left;
+}
+
+.nav-b li a {
+    cursor: pointer;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-transition:0.5s;
+    background-color: rgb(251, 247, 246);
+    border:1px solid #ebebeb;
+    color: #ff4166;
+    display:block;
+    font-size:16px;
+    line-height:35px;
+    padding:5px 20px;
+    text-decoration:none;
+    transition:0.5s;
+    border-radius: 2px;
+}
+.nav-b li:hover > a {
+    background: rgb(255, 255, 255);
+    border-color:#ebebeb;
+    color:#ff4166;
+}
+
+
+
+.mainContent{
+    padding:0px 15px;
+}
+.mainContent p{
+    padding-top:40px;
+    font-size: 19px;
+    text-indent : 2em ;
+}
+.main_question{
+    margin-left: 40px;
+}
+#frame_question {
+    width: 100%;
+    padding-top:20px;
+    min-height: 500px;
+
+}
+.mainContent{
+    padding-top:5px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+.mainContent p{
+    margin-left : 1em;
+}
+
+.question h3{
+    padding-top:15px;
+    font-size: 20px;
+    color:red;
+    cursor: pointer;
+}
+.answer{
+    height:auto;
+}
+.answer p{
+    margin-left: 80px;
+ }
+.rent_title{
+    font-size: 19px;
+    margin-left : -3em;
+    text-indent : 0em ;
+}
+
+.answer_2{
+    margin-left: 20px;
+    text-indent : 2em ;
+}
+.answer_1{
+    margin-left: 20px;
+}
+.answer_2 ol{
+    padding-right: 30px;
+    text-indent:0px;
+}
+.question h3{
+    padding-top:15px;
+    font-size: 20px;
+    color:red;
+    cursor: pointer;
+}
+.answer{
+    height:auto;
+}
+.answer p{
+    margin-left: 80px;
+}
+.rent_title{
+    font-size: 19px;
+    margin-left : -3em;
+    text-indent : 0em ;
+}
+
+.answer_2{
+    margin-left: 20px;
+    text-indent : 2em ;
+}
+.answer_1{
+    margin-left: 20px;
+}
+.answer_2 ol{
+    padding-right: 30px;
+    text-indent:0px;
+}
+.dataSource{
+    float: right;
+}

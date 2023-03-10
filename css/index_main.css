@@ -1,0 +1,21 @@
+#main{
+    padding-top: 50px;
+}
+.index_img {
+
+    padding: 5px 5px 10px 5px; /*top right bottom left*/
+    float: left;
+
+
+}
+.imgdiv{
+    z-index: 0;
+    position: absolute;
+}
+.imgtext{
+    position: absolute;
+    left: 235px;
+    top:150px;
+    z-index: 1;
+}
+

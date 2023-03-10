@@ -1,0 +1,52 @@
+body{
+    font-family: "Microsoft JhengHei";
+    background: #FFF3E0;
+}
+
+#mainTitleDiv{
+    margin-top: 5px;
+    margin-right:580px;
+}
+
+.main-title img, h2{
+    float: left;
+}
+.main-title img{
+    padding-top: 10px;
+}
+.main-title h1{
+    width: 400px;
+    padding-top:40px;
+    padding-left: 15px;
+    border-bottom: 4px #eb0000 solid;
+}
+
+.mainContentDiv{
+    margin:30px 100px 20px 20px;
+}
+.mainContent{
+    padding:0px 15px;
+}
+.mainContent p{
+    padding-top:5px;
+    font-size: 19px;
+    text-indent : 2em ;
+}
+
+.main ol li{
+    font-size: 20px;
+    padding-top:10px;
+}
+.content ul li{
+    padding-top: 10px;
+}
+.main ol li a{
+    cursor: pointer;
+}
+.main ol li a:hover,a:focus{
+    color:darkred;
+}
+a{
+    color: black;
+    text-decoration:none;
+}

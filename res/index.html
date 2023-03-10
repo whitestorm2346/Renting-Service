@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TKU校外賃居服務網</title>
+    <link href="../css/index.css" rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+        function reinitIframe() {
+
+            var iframe = document.getElementById("frame_content");
+
+            try {
+
+                iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
+
+            } catch (ex) { }
+
+        }
+
+        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="wrapper">
+
+            <div id="titleBox">
+                <div class="title">
+                    <img src="../img/logo.png" width="450">
+                </div>
+            </div>
+
+            <div class="title-right">
+                <ul>
+
+                    <li><a href="index_eng.html">English</a></li>
+                    <li><a href="http://www.tku.edu.tw/">淡江大學首頁</a></li>
+                    <li><a href="http://www.military.tku.edu.tw/main.php">軍訓室首頁</a></li>
+                    <!--<li><a href="http://rent.tku-csie.net/">管理員登入</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div id="mainContenter">
+            <div id="sideContent">
+                <div class="menu-a">
+                    <div class="nav">
+                        <span>
+                            <h3><a href="index.html">租屋相關資訊</a></h3>
+                        </span>
+                        <div class="nav-a">
+                            <ul class="menu">
+
+                                <li><a href="https://house.nfu.edu.tw/TKU">雲端租屋生活網</a></li>
+
+                                <li><a onclick="changeOption(1);">租屋安全宣導</a></li>
+
+                                <li><a href="../finalweb\index.html">租屋數位學習網</a></li>
+
+
+                                <li><a onclick="changeOption(2)">租屋注意事項</a>
+
+
+                                    <ul>
+                                        <li><a onclick="changeOption(201);"><span>租屋建議注意事項</span></a></li>
+                                        <li><a onclick="changeOption(202);"><span>退租還屋注意事項</span></a></li>
+                                        <li><a onclick="changeOption(203);"><span>租屋教戰守則</span></a></li>
+                                        <li><a onclick="changeOption(204);"><span>常見租屋糾紛</span></a></li>
+                                    </ul>
+
+
+                                </li>
+
+                                <li><a onclick="changeOption(3);">租屋常見Q&A</a></li>
+
+                                <li><a onclick="changeOption(4);">租屋相關法律資訊</a>
+                                    <ul>
+                                        <li><a onclick="changeOption(401);"><span>存證信函</span></a></li>
+                                        <li><a onclick="changeOption(402);"><span>房屋租賃契約公證</span></a></li>
+                                        <li><a onclick="changeOption(403);"><span>選擇訂約對象</span></a></li>
+                                        <li><a onclick="changeOption(404);"><span>租賃法律關係概說</span></a></li>
+                                        <li><a onclick="changeOption(405);"><span>租屋糾紛解決</span></a></li>
+                                        <li><a onclick="changeOption(406);"><span>租屋相關法律條文</span></a></li>
+                                        <li><a onclick="changeOption(407);"><span>租約內容注意事項</span></a></li>
+                                        <li><a onclick="changeOption(408);"><span>租約之履行</span></a></li>
+                                        <li><a onclick="changeOption(409);"><span>租約相關法律</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a onclick="changeOption(5);">防災宣導影片</a>
+                                    <ul>
+                                        <li><a onclick="changeOption(501);"><span>糾紛</span></a></li>
+                                        <li><a onclick="changeOption(502);"><span>居住安全</span></a></li>
+                                        <li><a onclick="changeOption(503);"><span>賃居宣導</span></a></li>
+                                        <li><a onclick="changeOption(504);"><span>用電</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a onclick="changeOption(6);">租屋相關表格下載</a></li>
+
+                                <li><a href="https://www.land.moi.gov.tw/chhtml/hotnewsall.asp?cid=1589">租屋條例專區</a></li>
+                                <li><a onclick="changeOption(9);">租賃定型化契約</a></li>
+
+                            </ul>
+                        </div>
+                        <span id="conect">
+
+                            <h3>友善連結</h3>
+                        </span>
+                        <div class="nav-a">
+                            <ul class="menu">
+
+                                <li><a href="https://www.tmm.org.tw/"><span>崔媽媽基金會</span></a></li>
+                                <li><a href="https://csrc.nfu.edu.tw/"><span>教育部賃居服務網</span></a></li>
+                                <li><a href="https://pip.moi.gov.tw/V3/Default.aspx"><span>內政部租屋資訊網</span></a></li>
+                                <li><a href="https://pip.moi.gov.tw/V3/B/SCRB0501.aspx?mode=9"><span>社會住宅包租代管</span></a>
+                                </li>
+                                <li><a
+                                        href="http://welfare.ntpc.gov.tw/viewService/show/268435496?fromOpa=1"><span>新北市租金補貼</span></a>
+                                </li>
+                                <li><a href="https://pip.moi.gov.tw/V3/B/SCRB0102.aspx"><span>中央300億租金補貼</span></a></li>
+
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="main-a">
+                    <iframe id="frame_content" name="frame_content" allowTransparency="true" src="" frameborder="0"
+                        scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="foot">
+            <p align="center">
+                本站著作屬於淡江大學 軍訓室，請詳見<a href="http://www.military.tku.edu.tw/doc/termofuse.php">使用規則</a><br>
+                資料維護：蔣德馨 Tel: +886-2-26215656 Ext. 3227 <br>
+                軍訓室 Tel: 886-2-26215656 Ext. 3227 / Fax: 886-2-26265849<br>
+                地址:25137 新北市淡水區英專路151號 Powered by RulingDigital<br>
+            </p>
+
+        </div>
+        <div class="footerDiv">
+            &copy;2016 Design by TingWang
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

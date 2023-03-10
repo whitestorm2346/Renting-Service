@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/rightSideDiv.css" rel="stylesheet">
+    <link href="../css/notice.css" rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/notice.js"></script>
+    <script >
+        function reinitIframe(){
+
+            var iframe = document.getElementById("frame_notice");
+
+            try{
+
+                iframe.height =  iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
+
+            }catch (ex){}
+
+        }
+
+        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+    </script>
+    <title>TKU校外賃居服務網</title>
+</head>
+<body>
+<div id="header" >
+    <div id="mainDiv">
+        <div id="main">
+            <div id="mainTitleDiv">
+                <div class="main-title">
+                    <img src="../img/warning.png" width="65">
+                    <h1><a href="notice_index.html">租屋注意事項</a></h1>
+                </div>
+            </div>
+
+            <div id="main-subMenuDiv">
+                <div id="main-subMenu">
+                    <ul class="nav-b">
+                        <li><a onclick="changeOption2(2011);">承租細節說不清</a></li>
+                        <li><a onclick="changeOption2(2012);">租屋權利義務關係認知不清楚</a></li>
+                        <li><a onclick="changeOption2(2013);">房東與房客溝通不良</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mainContentDiv">
+                <div id="mainContent">
+                    <iframe id="frame_notice"  scrolling="No"  src="" frameborder="0" >
+                    </iframe>
+                </div>
+            </div>
+            <p class="dataSource">資料來源:崔媽媽電子報 </p>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

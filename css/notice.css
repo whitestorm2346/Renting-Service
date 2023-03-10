@@ -1,0 +1,60 @@
+.main-title h1{
+    cursor: pointer;
+}
+#main-subMenuDiv{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.nav-b,.nav-b ul{
+    list-style: none;
+    margin: 0px;
+    margin:0px;
+}
+
+.nav-b  li{
+    float:left;
+}
+
+.nav-b li a {
+    cursor: pointer;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-transition:0.5s;
+    background-color: rgb(251, 247, 246);
+    border:1px solid #ebebeb;
+    color: #ff4166;
+    display:block;
+    font-size:16px;
+    line-height:35px;
+    padding:5px 20px;
+    text-decoration:none;
+    transition:0.5s;
+    border-radius: 2px;
+}
+.nav-b li:hover > a {
+    background: rgb(255, 255, 255);
+    border-color:#ebebeb;
+    color:#ff4166;
+}
+
+.typesetting{
+    padding-top: 3px;
+    text-indent: 2em;
+}
+.main_question{
+    margin-left: 40px;
+}
+#frame_notice {
+    width: 100%;
+    padding-top:20px;
+    min-height: 500px;
+
+}
+ h3{
+    cursor: pointer;
+}
+
+.dataSource{
+    float: right;
+}

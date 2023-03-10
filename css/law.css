@@ -1,0 +1,60 @@
+.main-title h1{
+    cursor: pointer;
+}
+.main-title img{
+    margin-top: 15px;
+}
+.main-title h1{
+    width: 400px;
+    padding-top:40px;
+    padding-left: 15px;
+    border-bottom: 4px #eb0000 solid;
+    cursor: pointer;
+}
+
+#main-subMenuDiv{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.typesetting{
+    padding-top: 3px;
+    text-indent: 2em;
+}
+.main_question{
+    margin-left: 40px;
+}
+#frame_notice {
+    width: 100%;
+    padding-top:20px;
+    min-height: 500px;
+
+}
+.mainContent{
+    padding-top:5px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+.mainContent p{
+    margin-left : 1em;
+}
+.main ol li{
+    font-size: 20px;
+    padding-top:10px;
+}
+.title h3{
+    cursor: pointer;
+}
+.content ul li{
+    padding-top: 10px;
+}
+.main ol li a{
+    cursor: pointer;
+}
+.main ol li a:hover,a:focus{
+    color:darkred;
+}
+p{
+    font-size: 18px;
+}
+
+

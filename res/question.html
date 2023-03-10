@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TKU校外賃居服務網</title>
+    <link href="../css/question.css" rel="stylesheet">
+    <link href="../css/rightSideDiv.css"rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/question.js"></script>
+    <script >
+        function reinitIframe(){
+
+            var iframe = document.getElementById("frame_question");
+
+            try{
+
+                iframe.height =  iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
+
+            }catch (ex){}
+
+        }
+
+        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+    </script>
+
+
+</head>
+<body >
+    <div id="header" >
+        <div id="mainDiv">
+            <div id="main">
+                <div id="mainTitleDiv">
+                    <div class="main-title">
+                        <img src="../img/question.png" width="85">
+                        <h1><a onclick="changeOption2(-1);">租屋常見Q&A</a></h1>
+                    </div>
+                </div>
+
+                <div id="main-subMenuDiv">
+                    <div id="main-subMenu">
+                        <ul class="nav-b">
+                            <li><a onclick="changeOption2(300);">定/押/租金問題</a></li>
+                            <li><a onclick="changeOption2(301);">簽約問題</a></li>
+                            <li><a onclick="changeOption2(302);">修繕問題</a></li>
+                            <li><a onclick="changeOption2(303);">隱私問題</a></li>
+                            <li><a onclick="changeOption2(304);">解/違約問題</a></li>
+                            <li><a onclick="changeOption2(305);">費用(水電瓦斯)問題</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mainContentDiv">
+                    <div id="mainContent">
+                        <iframe id="frame_question"  scrolling="No"  src="" frameborder="0" >
+                        </iframe>
+                    </div>
+                    <p class="dataSource" >資料來源:崔媽媽基金會</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
