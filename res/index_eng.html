@@ -1,171 +1,240 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TKU校外賃居服務網</title>
-    <link href="../css/index_eng.css" rel="stylesheet">
+    <link href="../css/index_eng.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/index.js"></script>
     <script>
-        function reinitIframe() {
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_content");
 
-            var iframe = document.getElementById("frame_content");
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
 
-            try {
-
-                iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
-
-            } catch (ex) { }
-
-        }
-
-        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
     </script>
-</head>
+  </head>
 
-<body>
-    <div id="header">
-        <div class="wrapper">
+  <body>
+    <header>
+      <div class="top-logo">
+        <img src="../img/title1_bar2.png" alt="TKU Background" class="bg" />
+        <img src="../img/logo.png" alt="校外賃居服務網" class="logo" />
+      </div>
 
-            <div id="titleBox">
-                <div class="title">
-                    <img src="../img/logo.png" width="450">
-                </div>
-            </div>
+      <ul class="main-navbar">
+        <li><a href="./index.html">中文</a></li>
+        <li><a href="http://www.tku.edu.tw/">TKU</a></li>
+        <li>
+          <a href="http://www.military.tku.edu.tw/main.php"
+            >Military Edu. OFC</a
+          >
+        </li>
+        <!--<li><a href="http://rent.tku-csie.net/">Manager Login</a></li>-->
+      </ul>
+    </header>
 
-            <div class="title-right">
-                <ul>
-                    <li><a href="http://163.13.223.167/res/index.html">中文</a></li>
-                    <li><a href="http://www.tku.edu.tw/">淡江大學首頁</a></li>
-                    <li><a href="http://www.military.tku.edu.tw/main.php">軍訓室首頁</a></li>
-                    <li><a href="http://rent.tku-csie.net/">管理員登入</a></li>
-                </ul>
-            </div>
+    <section class="main">
+      <nav class="reference">
+        <div class="nav-title">
+          <h3><a href="./index_eng.html">Rental Information</a></h3>
+          <button class="nav-btn" id="nav-btn-1">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button class="close-btn hide-btn" id="close-btn-1">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-    </div>
-    <div class="wrapper">
-        <div id="mainContenter">
-            <div id="sideContent">
-                <div class="menu-a">
-                    <div class="nav">
-                        <span>
-                            <h3><a href="index.html">Rental information</a></h3>
-                        </span>
-                        <div class="nav-a">
-                            <ul class="menu">
 
-                                <li><a href="https://house.nfu.edu.tw/TKU">Rental</a></li>
+        <ul class="menu" id="menu-1">
+          <li><a href="https://house.nfu.edu.tw/TKU">Rental</a></li>
 
-                                <li><a onclick="changeOption(1);">Rental Safety</a></li>
+          <li><a onclick="changeOption(1);">Rental Safety</a></li>
 
-                                <li><a href="http://163.13.149.45/05_project/10624/finalweb_G1/">Rental learning</a>
-                                </li>
+          <li><a href="../finalweb/index.html">Rental Learning</a></li>
 
+          <li class="inner-menu">
+            <a onclick="changeOption(2)">Precautions for Renting</a>
 
-                                <li><a onclick="changeOption(2)">Precautions for renting</a>
+            <ul>
+              <li>
+                <a onclick="changeOption(201);"
+                  ><span>Rental Recommendations</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(202);"><span>Refunding Rent</span></a>
+              </li>
+              <li>
+                <a onclick="changeOption(203);"
+                  ><span>Tenancy Guidelines</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(204);"><span>Rent Dispute</span></a>
+              </li>
+            </ul>
+          </li>
 
+          <li><a onclick="changeOption(3);">Rent Q&A</a></li>
 
-                                    <ul>
-                                        <li><a onclick="changeOption(201);"><span>Rental recommendations</span></a></li>
-                                        <li><a onclick="changeOption(202);"><span>Refunding rent</span></a></li>
-                                        <li><a onclick="changeOption(203);"><span>Tenancy Guidelines</span></a></li>
-                                        <li><a onclick="changeOption(204);"><span>Rent dispute</span></a></li>
-                                    </ul>
+          <li class="inner-menu">
+            <a onclick="changeOption(4);">Legal Information</a>
 
+            <ul>
+              <li>
+                <a onclick="changeOption(401);"><span>Deposit Letter</span></a>
+              </li>
+              <li>
+                <a onclick="changeOption(402);"
+                  ><span>Notarization of House Lease Contract</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(403);"
+                  ><span>Contrat Landlord</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(404);"
+                  ><span>Overview of Lease Legal Relationship</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(405);"
+                  ><span>Rental Dispute Resolution</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(406);"
+                  ><span>Rental-related Legal Provisions</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(407);"
+                  ><span>Notes on Lease Content</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(408);"
+                  ><span>Performance of Lease</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(409);"
+                  ><span>Lease-related Laws</span></a
+                >
+              </li>
+            </ul>
+          </li>
 
-                                </li>
+          <li class="inner-menu">
+            <a onclick="changeOption(5);">Disaster Preparedness Video</a>
 
-                                <li><a onclick="changeOption(3);">Rent Q&A</a></li>
+            <ul>
+              <li>
+                <a onclick="changeOption(501);"><span>Dispute</span></a>
+              </li>
+              <li>
+                <a onclick="changeOption(502);"><span>Living Safety</span></a>
+              </li>
+              <li>
+                <a onclick="changeOption(503);"
+                  ><span>Rental Promotion</span></a
+                >
+              </li>
+              <li>
+                <a onclick="changeOption(504);"><span>Electricity</span></a>
+              </li>
+            </ul>
+          </li>
 
-                                <li><a onclick="changeOption(4);">Legal information</a>
-                                    <ul>
-                                        <li><a onclick="changeOption(401);"><span>Deposit letter</span></a></li>
-                                        <li><a onclick="changeOption(402);"><span>Notarization of house lease
-                                                    contract</span></a></li>
-                                        <li><a onclick="changeOption(403);"><span>Contrat landlord</span></a></li>
-                                        <li><a onclick="changeOption(404);"><span>Overview of Lease Legal
-                                                    Relationship</span></a></li>
-                                        <li><a onclick="changeOption(405);"><span>Rental dispute resolution</span></a>
-                                        </li>
-                                        <li><a onclick="changeOption(406);"><span>Rental-related legal
-                                                    provisions</span></a></li>
-                                        <li><a onclick="changeOption(407);"><span>Notes on lease content</span></a></li>
-                                        <li><a onclick="changeOption(408);"><span>Performance of lease</span></a></li>
-                                        <li><a onclick="changeOption(409);"><span>Lease-related laws</span></a></li>
-                                    </ul>
-                                </li>
+          <li><a onclick="changeOption(6);">Download Related Forms</a></li>
 
-                                <li><a onclick="changeOption(5);">Disaster Preparedness Video</a>
-                                    <ul>
-                                        <li><a onclick="changeOption(501);"><span>dispute</span></a></li>
-                                        <li><a onclick="changeOption(502);"><span>Living safety</span></a></li>
-                                        <li><a onclick="changeOption(503);"><span>Rental promotion</span></a></li>
-                                        <li><a onclick="changeOption(504);"><span>Electricity</span></a></li>
-                                    </ul>
-                                </li>
+          <li>
+            <a href="https://www.land.moi.gov.tw/chhtml/hotnewsall.asp?cid=1589"
+              >Tenancy Ordinance Area</a
+            >
+          </li>
+          <li><a onclick="changeOption(9);">Lease Stereotyped Contract</a></li>
+        </ul>
 
-                                <li><a onclick="changeOption(6);">Download related forms</a></li>
-
-                                <li><a href="https://www.land.moi.gov.tw/chhtml/hotnewsall.asp?cid=1589">Tenancy
-                                        Ordinance Area</a></li>
-
-                                <li><a
-                                        href="https://www.ey.gov.tw/Page/AABD2F12D8A6D561/17ecdfce-b775-41c3-b2cd-fc7addd2279a">Lease
-                                        stereotyped contract</a></li>
-
-                            </ul>
-                        </div>
-                        <span id="conect">
-                            <h3>Information link</h3>
-                        </span>
-                        <div class="nav-a">
-                            <ul class="menu">
-
-                                <li><a href="https://www.tmm.org.tw/"><span>Tsuei Ma Ma</span></a></li>
-                                <li><a href="https://csrc.nfu.edu.tw/"><span>CSRC</span></a></li>
-                                <li><a href="https://pip.moi.gov.tw/V3/Default.aspx"><span>Houserentgov</span></a></li>
-                                <li><a
-                                        href="https://pip.moi.gov.tw/V3/B/SCRB0501.aspx?mode=9"><span>Pipmoigov</span></a>
-                                </li>
-                                <li><a
-                                        href="http://welfare.ntpc.gov.tw/viewService/show/268435496?fromOpa=1"><span>NTPCgov</span></a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <div id="main">
-                <div class="main-a">
-                    <iframe id="frame_content" name="frame_content" allowTransparency="true" src="" frameborder="0"
-                        scrolling="no"></iframe>
-                </div>
-            </div>
+        <div class="nav-title">
+          <h3>Information Links</h3>
+          <button class="nav-btn" id="nav-btn-2">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button class="close-btn hide-btn" id="close-btn-2">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-    </div>
+
+        <ul class="menu" id="menu-2">
+          <li>
+            <a href="https://www.tmm.org.tw/"
+              ><span>Tsuei Ma Ma Foundation</span></a
+            >
+          </li>
+          <li>
+            <a href="https://csrc.nfu.edu.tw/"><span>CSRC</span></a>
+          </li>
+          <li>
+            <a href="https://pip.moi.gov.tw/V3/Default.aspx"
+              ><span>Houserentgov</span></a
+            >
+          </li>
+          <li>
+            <a href="https://pip.moi.gov.tw/V3/B/SCRB0501.aspx?mode=9"
+              ><span>Pipmoigov</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="http://welfare.ntpc.gov.tw/viewService/show/268435496?fromOpa=1"
+              ><span>NTPCgov</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-frame">
+        <iframe
+          id="frame_content"
+          name="frame_content"
+          allowTransparency="true"
+          src=""
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </section>
 
     <footer id="footer">
-        <div class="foot">
-            <p align="center">
-                本站著作屬於淡江大學 軍訓室，請詳見<a href="http://www.military.tku.edu.tw/doc/termofuse.php">使用規則</a><br>
-                資料維護：蔣德馨 Tel: +886-2-26215656 Ext. 3227 <br>
-                軍訓室 Tel: 886-2-26215656 Ext. 3227 / Fax: 886-2-26265849<br>
-                地址:25137 新北市淡水區英專路151號 Powered by RulingDigital<br>
-            </p>
-
-        </div>
-        <div class="footerDiv">
-            &copy;2016 Design by TingWang
-        </div>
-
+      <p class="contact">
+        This website belong to the Military Edu. OFC of TKU. <br />
+        Please refer to the usage regulations for
+        <a href="http://www.military.tku.edu.tw/doc/termofuse.php"
+          >more information</a
+        ><br />
+        Data Maintain: JIANG,DE-SIN Tel: +886-2-26215656 Ext. 3227 <br />
+        Military Edu. OFC Tel: 886-2-26215656 Ext. 3227 / Fax: 886-2-26265849<br />
+        Address: 25137 新北市淡水區英專路151號 Powered by RulingDigital<br />
+      </p>
+      <div class="copyright">&copy;2023 Design by TseHsunYu</div>
     </footer>
-
-
-
-</body>
-
+  </body>
+  <script src="../js/menu.js"></script>
 </html>
