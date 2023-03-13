@@ -1,21 +1,25 @@
-#main{
-    padding-top: 50px;
+.main {
+    position: relative;
+    max-width: 90%;
+    margin: 2rem auto;
 }
-.index_img {
 
-    padding: 5px 5px 10px 5px; /*top right bottom left*/
-    float: left;
-
-
+.background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: .5rem;
+    column-gap: .5rem;
 }
-.imgdiv{
-    z-index: 0;
+
+.background img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    width: 30vw;
     position: absolute;
+    top: calc(50% - 16vw);
+    left: calc(50% - 15.5vw);
 }
-.imgtext{
-    position: absolute;
-    left: 235px;
-    top:150px;
-    z-index: 1;
-}
-

@@ -201,13 +201,13 @@ Main Section Start
         height: fit-content;
         border-radius: 5px;
     }
-    
+
     .nav-title {
         padding: 1rem;
         margin: 0 auto;
         font-size: 1.5rem;
     }
-    
+
     .nav-title a {
         display: inline;
     }
@@ -257,7 +257,7 @@ Main Section Start
     }
 
     .inner-menu:hover ul li {
-        font-size: 1rem;  
+        font-size: 1rem;
     }
 
     .inner-menu:hover ul li:hover {
@@ -268,13 +268,13 @@ Main Section Start
 /* MAIN FRAME PART */
 
 .main-frame {
-    max-width:750px;
+    max-width: 750px;
     width: 100%;
-    height:100%;
+    height: 100%;
     margin: 0 auto;
 }
 
-#frame_content{
+#frame_content {
     width: 100%;
     min-height: 500px;
 }
@@ -322,7 +322,7 @@ footer {
 }
 
 .contact {
-    font-size: .5rem;
+    font-size: 1rem;
 }
 
 .contact a {
@@ -332,16 +332,16 @@ footer {
 }
 
 .copyright {
-    font-size: .4rem;
+    font-size: .8rem;
 }
 
 @media screen and (min-width: 768px) {
     .contact {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .copyright {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 }
 
