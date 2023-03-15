@@ -1,52 +1,135 @@
-body{
+:root {
+    --clr-bg: #fff3e0;
+    --clr-primary-light: #ff9797;
+    --clr-primary: #eb0000;
+    --clr-primary-dark: #8b0000;
+    --clr-secondary-light: #5f5346;
+    --clr-secondary-dark: #3a3025;
+    --clr-grey: #e9e9e9;
+}
+
+body {
     font-family: "Microsoft JhengHei";
     background: #FFF3E0;
 }
 
-#mainTitleDiv{
+#mainTitleDiv {
     margin-top: 5px;
-    margin-right:580px;
+    margin-right: 580px;
 }
 
-.main-title img, h2{
+.main-title img,
+h2 {
     float: left;
 }
-.main-title img{
+
+.main-title img {
     padding-top: 10px;
 }
-.main-title h1{
+
+.main-title h1 {
     width: 400px;
-    padding-top:40px;
+    padding-top: 40px;
     padding-left: 15px;
     border-bottom: 4px #eb0000 solid;
 }
 
-.mainContentDiv{
-    margin:30px 100px 20px 20px;
-}
-.mainContent{
-    padding:0px 15px;
-}
-.mainContent p{
-    padding-top:5px;
-    font-size: 19px;
-    text-indent : 2em ;
+.mainContentDiv {
+    margin: 30px 100px 20px 20px;
 }
 
-.main ol li{
-    font-size: 20px;
-    padding-top:10px;
+.mainContent {
+    padding: 0px 15px;
 }
-.content ul li{
+
+.mainContent p {
+    padding-top: 5px;
+    font-size: 19px;
+    text-indent: 2em;
+}
+
+.main ol li {
+    font-size: 20px;
     padding-top: 10px;
 }
-.main ol li a{
+
+.content ul li {
+    padding-top: 10px;
+}
+
+.main ol li a {
     cursor: pointer;
 }
-.main ol li a:hover,a:focus{
-    color:darkred;
+
+.main ol li a:hover,
+a:focus {
+    color: darkred;
 }
-a{
+
+a {
     color: black;
-    text-decoration:none;
+    text-decoration: none;
+}
+
+/*
+===========================
+RWD version
+===========================
+*/
+
+.main {
+    display: block;
+}
+
+.main-title img {
+    margin-top: 15px;
+    width: 3rem;
+}
+
+.main-title h1 {
+    width: 400px;
+    padding-top: 40px;
+    padding-left: 15px;
+    border-bottom: 4px solid var(--clr-primary);
+}
+
+.main-content ol {
+    margin-left: 1rem;
+}
+
+.main-content ol li {
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+.main-content ol li a {
+    cursor: pointer;
+    border-bottom: 2px solid var(--clr-secondary-light);
+}
+
+.main-content ol li a:hover {
+    font-weight: bold;
+    color: darkred;
+}
+
+.imgs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.imgs img {
+    display: block;
+    width: 90%;
+    margin: .5rem auto;
+}
+
+@media screen and (min-width: 660px) {
+    .main-content ol li {
+        font-size: 1.5rem;
+    }
+
+    .imgs {
+        grid-template-columns: 1fr 1fr;
+    }
 }

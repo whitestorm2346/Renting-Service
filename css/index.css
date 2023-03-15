@@ -1,6 +1,6 @@
 :root {
     --clr-bg: #fff3e0;
-    --clr-primary-light: #ffdcae;
+    --clr-primary-light: #ffe9cc;
     --clr-primary: #ffdcae;
     --clr-primary-dark: #ffba60;
     --clr-secondary-light: #5f5346;
@@ -143,7 +143,7 @@ Main Section Start
 }
 
 .reference {
-    background-color: #ffdcae;
+    background-color: var(--clr-primary);
     height: fit-content;
 }
 
@@ -191,12 +191,13 @@ Main Section Start
     .main {
         max-width: 1200px;
         margin: 2rem auto;
+        padding: 0 1rem;
         display: grid;
         grid-template-columns: 2fr 8fr;
     }
 
     .reference {
-        background-color: #ffdcae;
+        background-color: var(--clr-primary);
         padding-bottom: 2rem;
         height: fit-content;
         border-radius: 5px;
@@ -261,7 +262,7 @@ Main Section Start
     }
 
     .inner-menu:hover ul li:hover {
-        background-color: var(--clr-primary-dark);
+        background-color: var(--clr-primary);
     }
 }
 
