@@ -94,9 +94,20 @@ RWD version
     border-bottom: 4px solid var(--clr-primary);
 }
 
+.main-title h2 {
+    width: 90%;
+    float: none;
+}
+
+.main-title p {
+    display: block;
+    width: 85%;
+    padding-left: 1.5rem;
+}
+
 .main-content {
     width: 100%;
-    margin: 3rem auto;
+    margin: .5rem auto;
 }
 
 .main-content ol {
@@ -131,6 +142,10 @@ RWD version
 }
 
 @media screen and (min-width: 660px) {
+    .main-content {
+        margin: 2.5rem auto;
+    }
+
     .main-content ol li {
         font-size: 1.5rem;
     }
