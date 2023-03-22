@@ -117,6 +117,7 @@ RWD version
 .main-content ol li {
     font-size: 1.75rem;
     line-height: 2rem;
+    margin-bottom: .5rem;
 }
 
 .main-content ol li a {

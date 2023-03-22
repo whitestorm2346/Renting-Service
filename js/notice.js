@@ -5,7 +5,7 @@
  * Created by amyjim9907 on 2016/10/10.
  */
 var optionCount = 0;
-$(function(){
+$(function () {
     var url = window.location;
     var urlAux = url.toString().split("=");
     var option = urlAux[1];
@@ -13,11 +13,11 @@ $(function(){
     changeFrameURL(optionCount);
 });
 
-function changeFrameURL(option){
-    if (option==null){
+function changeFrameURL(option) {
+    if (option == null) {
         document.getElementById("frame_notice").src = 'notice_main.html';
     }
-    switch (parseInt(option)){
+    switch (parseInt(option)) {
         case -1:
             document.getElementById("frame_notice").src = 'notice_main.html';
             break;
@@ -33,15 +33,16 @@ function changeFrameURL(option){
     }
 }
 function changeOption2(option) {
-    document.location.href="notice_201.html?option="+option;
+    document.location.href = "notice_201.html?option=" + option;
 }
-function show(obj,id){
-    var o=document.getElementById(id);
-    if(o.style.display=='none'){
-        o.style.display='';
+function show(obj, id) {
+    var o = document.getElementById(id);
+
+    if (o.className == 'content') {
+        o.className = 'show-content';
     }
-    else{
-        o.style.display='none';
+    else if (o.className == 'show-content') {
+        o.className = 'content';
     }
 }
 

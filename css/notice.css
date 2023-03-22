@@ -1,60 +1,122 @@
-.main-title h1{
-    cursor: pointer;
-}
-#main-subMenuDiv{
+#main-subMenuDiv {
     margin-left: 20px;
     margin-top: 30px;
 }
 
-.nav-b,.nav-b ul{
+.nav-b,
+.nav-b ul {
     list-style: none;
     margin: 0px;
-    margin:0px;
+    margin: 0px;
 }
 
-.nav-b  li{
-    float:left;
+.nav-b li {
+    float: left;
 }
 
 .nav-b li a {
     cursor: pointer;
-    -moz-transition:0.5s;
-    -o-transition:0.5s;
-    -webkit-transition:0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
     background-color: rgb(251, 247, 246);
-    border:1px solid #ebebeb;
+    border: 1px solid #ebebeb;
     color: #ff4166;
-    display:block;
-    font-size:16px;
-    line-height:35px;
-    padding:5px 20px;
-    text-decoration:none;
-    transition:0.5s;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: 0.5s;
     border-radius: 2px;
 }
-.nav-b li:hover > a {
+
+.nav-b li:hover>a {
     background: rgb(255, 255, 255);
-    border-color:#ebebeb;
-    color:#ff4166;
+    border-color: #ebebeb;
+    color: #ff4166;
 }
 
-.typesetting{
+.typesetting {
     padding-top: 3px;
     text-indent: 2em;
 }
-.main_question{
+
+.main_question {
     margin-left: 40px;
 }
+
 #frame_notice {
     width: 100%;
-    padding-top:20px;
+    padding-top: 20px;
     min-height: 500px;
 
 }
- h3{
+
+h3 {
     cursor: pointer;
 }
 
-.dataSource{
+/* .dataSource {
     float: right;
+} */
+
+
+/*
+=============================
+RWD version
+=============================
+*/
+
+.nav-btn {
+    list-style: none;
+    padding: .5rem .75rem;
+    margin-right: .2rem;
+    margin-bottom: .5rem;
+    width: fit-content;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.main-navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.nav-btn a {
+    color: #ff4166;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #ff4166;
+}
+
+.nav-btn:hover a {
+    color: #fff;
+}
+
+.dataSource {
+    text-align: center;
+}
+
+.pop-up {
+    width: 95%;
+    margin: .5rem auto;
+}
+
+.title:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+}
+
+.show-content {
+    width: 95%;
+    display: block;
 }
