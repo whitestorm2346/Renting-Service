@@ -118,10 +118,10 @@ RWD version
 
 .main-content ol {
     margin-left: 1rem;
-    width: 90%;
 }
 
 .main-content ol li {
+    width: 90%;
     font-size: 1.75rem;
     line-height: 2rem;
     margin-bottom: .5rem;
