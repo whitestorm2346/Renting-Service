@@ -110,6 +110,12 @@ RWD version
     margin: .5rem auto;
 }
 
+.main-content p {
+    width: 90%;
+    line-height: 2rem;
+    font-size: 1.25rem;
+}
+
 .main-content ol {
     margin-left: 1rem;
 }
