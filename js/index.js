@@ -113,5 +113,8 @@ function goPay(option) {
 function changeOption(option) {
     document.location.href = "index.html?option=" + option;
 }
+function changeOptionEng(option) {
+    document.location.href = "index_eng.html?option=" + option;
+}
 
 
