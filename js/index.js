@@ -37,6 +37,9 @@ function changeFrameURL(option) {
         case 5:
             document.getElementById("frame_content").src = 'video.html';
             break;
+        case 13:
+            document.getElementById("frame_content").src = 'video_eng.html';
+            break;
         case 6:
             document.getElementById("frame_content").src = 'download.html';
             break;
