@@ -22,22 +22,26 @@ function changeFrameURL(option) {
         case 1:
             document.getElementById("frame_content").src = 'safe.html';
             break;
+        case 11:
+            document.getElementById("frame_content").src = 'safe_eng.html';
+            break;
         case 2:
             document.getElementById("frame_content").src = 'notice_index.html';
             break;
-
         case 3:
             document.getElementById("frame_content").src = 'question.html ';
             break;
         case 4:
             document.getElementById("frame_content").src = 'law.html';
-
             break;
         case 5:
             document.getElementById("frame_content").src = 'video.html';
             break;
         case 6:
             document.getElementById("frame_content").src = 'download.html';
+            break;
+        case 12:
+            document.getElementById("frame_content").src = 'download_eng.html';
             break;
         case 7:
             document.getElementById("frame_content").src = 'index_eng.html';
@@ -104,7 +108,9 @@ function changeFrameURL(option) {
         case 9:
             document.getElementById("frame_content").src = 'contract.html';
             break;
-
+        case 10:
+            document.getElementById("frame_content").src = 'contract_eng.html';
+            break;
     }
 }
 function goPay(option) {
