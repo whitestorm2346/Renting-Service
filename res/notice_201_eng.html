@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="../css/rightSideDiv.css" rel="stylesheet">
+    <link href="../css/notice.css" rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/notice_eng.js"></script>
+    <script>
+        function reinitIframe() {
+
+            var iframe = document.getElementById("frame_notice");
+
+            try {
+
+                iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
+
+            } catch (ex) { }
+
+        }
+
+        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+    </script>
+    <title>TKU校外賃居服務網</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-title">
+            <img src="../img/warning.png">
+            <h1><a href="notice_index_eng.html">Advice on Renting</a></h1>
+        </div>
+
+        <div class="main-navbar">
+            <ul>
+                <li class="nav-btn"><a onclick="changeOption2(2011);">Details of the lease are unclear</a></li>
+                <li class="nav-btn"><a onclick="changeOption2(2012);">
+                        Unclear understanding of the relationship between
+                        rights and obligations in rental housing
+                    </a></li>
+                <li class="nav-btn"><a onclick="changeOption2(2013);">Poor communication between landlord and tenant</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <iframe id="frame_notice" scrolling="No" src="" frameborder="0">
+            </iframe>
+
+            <p class="dataSource">資料來源:崔媽媽電子報 </p>
+        </div>
+    </div>
+</body>
+
+</html>

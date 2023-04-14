@@ -28,6 +28,9 @@ function changeFrameURL(option) {
         case 2:
             document.getElementById("frame_content").src = 'notice_index.html';
             break;
+        case 14:
+            document.getElementById("frame_content").src = 'notice_index_eng.html';
+            break;
         case 3:
             document.getElementById("frame_content").src = 'question.html ';
             break;
@@ -54,53 +57,104 @@ function changeFrameURL(option) {
         case 201:
             document.getElementById("frame_content").src = 'notice_201.html';
             break;
+        case 2011:
+            document.getElementById("frame_content").src = 'notice_201_eng.html';
+            break;
         case 202:
             document.getElementById("frame_content").src = 'notice_202.html';
+            break;
+        case 2021:
+            document.getElementById("frame_content").src = 'notice_202_eng.html';
             break;
         case 203:
             document.getElementById("frame_content").src = 'notice_203.html';
             break;
+        case 2031:
+            document.getElementById("frame_content").src = 'notice_203_eng.html';
+            break;
         case 204:
             document.getElementById("frame_content").src = 'notice_204.html';
             break;
+        case 2041:
+            document.getElementById("frame_content").src = 'notice_204_eng.html';
+            break;
         case 401:
+            document.getElementById("frame_content").src = 'law_401.html';
+            break;
+        case 4011:
             document.getElementById("frame_content").src = 'law_401.html';
             break;
         case 402:
             document.getElementById("frame_content").src = 'law_402.html';
             break;
+        case 4021:
+            document.getElementById("frame_content").src = 'law_402.html';
+            break;
         case 403:
+            document.getElementById("frame_content").src = 'law_403.html';
+            break;
+        case 4031:
             document.getElementById("frame_content").src = 'law_403.html';
             break;
         case 404:
             document.getElementById("frame_content").src = 'law_404.html';
             break;
+        case 4041:
+            document.getElementById("frame_content").src = 'law_404.html';
+            break;
         case 405:
+            document.getElementById("frame_content").src = 'law_405.html';
+            break;
+        case 4051:
             document.getElementById("frame_content").src = 'law_405.html';
             break;
         case 406:
             document.getElementById("frame_content").src = 'law_406.html';
             break;
+        case 4061:
+            document.getElementById("frame_content").src = 'law_406.html';
+            break;
         case 407:
+            document.getElementById("frame_content").src = 'law_407.html';
+            break;
+        case 4071:
             document.getElementById("frame_content").src = 'law_407.html';
             break;
         case 408:
             document.getElementById("frame_content").src = 'law_408.html';
             break;
+        case 4081:
+            document.getElementById("frame_content").src = 'law_408.html';
+            break;
         case 409:
+            document.getElementById("frame_content").src = 'law_409.html';
+            break;
+        case 4091:
             document.getElementById("frame_content").src = 'law_409.html';
             break;
         case 501:
             document.getElementById("frame_content").src = 'video_501.html';
             break;
+        case 5011:
+            document.getElementById("frame_content").src = 'video_501_eng.html';
+            break;
         case 502:
             document.getElementById("frame_content").src = 'video_502.html';
+            break;
+        case 5021:
+            document.getElementById("frame_content").src = 'video_502_eng.html';
             break;
         case 503:
             document.getElementById("frame_content").src = 'video_503.html';
             break;
+        case 5031:
+            document.getElementById("frame_content").src = 'video_503_eng.html';
+            break;
         case 504:
             document.getElementById("frame_content").src = 'video_504.html';
+            break;
+        case 5041:
+            document.getElementById("frame_content").src = 'video_504_eng.html';
             break;
         case 7:
             document.getElementById("frame_content").src = 'form_student.html';
