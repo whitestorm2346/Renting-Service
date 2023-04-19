@@ -120,3 +120,12 @@ RWD version
     width: 95%;
     display: block;
 }
+
+a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkred;
+}
