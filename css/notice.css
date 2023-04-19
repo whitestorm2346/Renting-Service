@@ -121,11 +121,11 @@ RWD version
     display: block;
 }
 
-a {
+.inline-link {
     font-weight: bold;
     text-decoration: underline;
 }
 
-a:hover {
+.inline-link:hover {
     color: darkred;
 }
