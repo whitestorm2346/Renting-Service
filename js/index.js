@@ -37,6 +37,9 @@ function changeFrameURL(option) {
         case 4:
             document.getElementById("frame_content").src = 'law.html';
             break;
+        case 15:
+            document.getElementById("frame_content").src = 'law_eng.html';
+            break;
         case 5:
             document.getElementById("frame_content").src = 'video.html';
             break;
@@ -82,7 +85,7 @@ function changeFrameURL(option) {
             document.getElementById("frame_content").src = 'law_401.html';
             break;
         case 4011:
-            document.getElementById("frame_content").src = 'law_401.html';
+            document.getElementById("frame_content").src = 'law_401_eng.html';
             break;
         case 402:
             document.getElementById("frame_content").src = 'law_402.html';
