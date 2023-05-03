@@ -35,15 +35,6 @@ function changeFrameURL(option) {
 function changeOption2(option) {
     document.location.href = "notice_201.html?option=" + option;
 }
-function show(obj, id) {
-    var o = document.getElementById(id);
 
-    if (o.className == 'content') {
-        o.className = 'show-content';
-    }
-    else if (o.className == 'show-content') {
-        o.className = 'content';
-    }
-}
 
 

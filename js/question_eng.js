@@ -12,34 +12,34 @@ $(function () {
 
 function changeFrameURL(option) {
     if (option == null) {
-        document.getElementById("frame_question").src = 'question_main.html';
+        document.getElementById("frame_question").src = 'question_main_eng.html';
     }
     switch (parseInt(option)) {
         case -1:
-            document.getElementById("frame_question").src = 'question_main.html';
+            document.getElementById("frame_question").src = 'question_main_eng.html';
             break;
         case 300:
-            document.getElementById("frame_question").src = 'question_rent.html';
+            document.getElementById("frame_question").src = 'question_rent_eng.html';
             break;
         case 301:
-            document.getElementById("frame_question").src = 'question_assign.html';
+            document.getElementById("frame_question").src = 'question_assign_eng.html';
             break;
         case 302:
-            document.getElementById("frame_question").src = 'question_fix.html';
+            document.getElementById("frame_question").src = 'question_fix_eng.html';
             break;
         case 303:
-            document.getElementById("frame_question").src = 'question_privacy.html';
+            document.getElementById("frame_question").src = 'question_privacy_eng.html';
             break;
         case 304:
-            document.getElementById("frame_question").src = 'question_law.html';
+            document.getElementById("frame_question").src = 'question_law_eng.html';
             break;
         case 305:
-            document.getElementById("frame_question").src = 'question_pay.html';
+            document.getElementById("frame_question").src = 'question_pay_eng.html';
             break;
     }
 }
 function changeOption2(option) {
-    document.location.href = "question.html?option=" + option;
+    document.location.href = "question_eng.html?option=" + option;
 }
 
 

@@ -34,6 +34,9 @@ function changeFrameURL(option) {
         case 3:
             document.getElementById("frame_content").src = 'question.html ';
             break;
+        case 16:
+            document.getElementById("frame_content").src = 'question_eng.html ';
+            break;
         case 4:
             document.getElementById("frame_content").src = 'law.html';
             break;
