@@ -23,3 +23,30 @@
     top: calc(50% - 16vw);
     left: calc(50% - 15.5vw);
 }
+
+
+.autoplay {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.block {
+    background-color: #0087d4;
+    color: aliceblue;
+    width: 20%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-slide {
+    margin: 10px;
+    /* 圖片與圖片的間隔大小 */
+}
+
+.slick-slide img {
+    width: 100%;
+    border: 2px solid #fff;
+    /* 圖片的邊框大小 */
+}
