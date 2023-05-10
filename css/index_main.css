@@ -25,19 +25,24 @@
 }
 
 
-.autoplay {
-    width: 90%;
-    margin: 0px auto;
+.marquee {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
 }
 
-.block {
-    background-color: #0087d4;
-    color: aliceblue;
-    width: 20%;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.item {
+    height: fit-content;
+}
+
+.item img {
+    height: 90%;
+    object-fit: cover;
+    transition: all linear .4s;
+}
+
+.item .slick-center img {
+    transform: scale(1.4);
 }
 
 .slick-slide {
