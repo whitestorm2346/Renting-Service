@@ -175,6 +175,12 @@ function changeFrameURL(option) {
         case 10:
             document.getElementById("frame_content").src = 'contract_eng.html';
             break;
+        case 17:
+            document.getElementById("frame_content").src = 'communities.html';
+            break;
+        case 18:
+            document.getElementById("frame_content").src = 'communities_eng.html';
+            break;
     }
 }
 function goPay(option) {
