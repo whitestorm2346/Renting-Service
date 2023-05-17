@@ -7,6 +7,18 @@
     <title>TKU校外賃居服務網</title>
     <link href="../css/rightSideDiv.css" rel="stylesheet">
     <!-- <link href="../css/download.css" rel="stylesheet"> -->
+    <script>
+        function reinitIframe() {
+            var iframe = document.getElementById("frame_content");
+
+            try {
+                iframe.height =
+                    iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+            } catch (ex) { }
+        }
+
+        window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+    </script>
 </head>
 
 <body>

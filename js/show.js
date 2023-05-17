@@ -6,6 +6,8 @@ function display(obj, id) {
     else {
         o.style.display = 'none';
     }
+
+    window.parent.postMessage('show', '*')
 }
 function show(obj, id) {
     var o = document.getElementById(id);
@@ -16,4 +18,6 @@ function show(obj, id) {
     else if (o.className == 'show-content') {
         o.className = 'content';
     }
+
+    window.parent.postMessage('show', '*')
 }

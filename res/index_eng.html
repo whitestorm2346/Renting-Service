@@ -22,6 +22,17 @@
     }
 
     window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+
+    function handleMessage(event) {
+      if (event.data === 'show') {
+        // 顯示內容後的動作
+        var iframe = document.getElementById("frame_content");
+        iframe.height =
+          iframe.contentWindow.document.documentElement.scrollHeight;
+      }
+    }
+
+    window.addEventListener('message', handleMessage, false);
   </script>
 </head>
 
@@ -58,8 +69,6 @@
         <li><a href="https://house.nfu.edu.tw/TKU">Cloud Living Rental Network</a></li>
 
         <li><a onclick="changeOptionEng(11);">Rental Safety</a></li>
-
-        <li><a href="../finalweb/index.html">Rental Learning</a></li>
 
         <li class="inner-menu">
           <a onclick="changeOptionEng(14)">Precautions for Renting</a>

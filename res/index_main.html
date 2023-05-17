@@ -11,6 +11,18 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../js/index.js"></script>
+    <script>
+        function reinitIframe() {
+            var iframe = document.getElementById("frame_content");
+
+            try {
+                iframe.height =
+                    iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+            } catch (ex) { }
+        }
+
+        window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+    </script>
     <title>TKU校外賃居服務網</title>
 </head>
 
@@ -51,6 +63,19 @@
                     <div class="card-info">
                         <p>
                             點擊下載完整檔案
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="../finalweb/index.html">
+                <div class="card">
+                    <img src="/img/finalweb.png" alt="" class="card-img">
+
+                    <div class="card-info">
+                        <p>
+                            租屋數位學習網
                         </p>
                     </div>
                 </div>

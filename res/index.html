@@ -22,6 +22,17 @@
     }
 
     window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+
+    function handleMessage(event) {
+      if (event.data === 'show') {
+        // 顯示內容後的動作
+        var iframe = document.getElementById("frame_content");
+        iframe.height =
+          iframe.contentWindow.document.documentElement.scrollHeight;
+      }
+    }
+
+    window.addEventListener('message', handleMessage, false);
   </script>
 </head>
 
@@ -58,8 +69,6 @@
         <li><a href="https://house.nfu.edu.tw/TKU">雲端租屋生活網</a></li>
 
         <li><a onclick="changeOption(1);">租屋安全宣導</a></li>
-
-        <li><a href="../finalweb\index.html">租屋數位學習網</a></li>
 
         <li class="inner-menu">
           <a onclick="changeOption(2)">租屋注意事項</a>
