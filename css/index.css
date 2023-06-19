@@ -74,7 +74,7 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  background-color: var(--clr-grey);
+  background-color: #ffcda4;
 }
 
 .main-navbar li {
@@ -292,10 +292,15 @@ Main Section Start
 
 .show-menu li {
   width: 90%;
+  padding: 0.25rem 0.5rem;
   line-height: 2.5rem;
   font-size: 1.25rem;
-  border-bottom: 1px solid var(--clr-secondary-light);
   cursor: pointer;
+  border-radius: 8px;
+}
+
+.show-menu li a {
+  border-bottom: 1px solid var(--clr-secondary-light);
 }
 
 .show-menu li:hover {
