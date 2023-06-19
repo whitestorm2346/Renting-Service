@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TKU校外賃居服務網</title>
-    <link href="../css/question.css" rel="stylesheet">
-    <link href="../css/rightSideDiv.css" rel="stylesheet">
+    <link href="../css/question.css" rel="stylesheet" />
+    <link href="../css/rightSideDiv.css" rel="stylesheet" />
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/question_eng.js"></script>
     <script>
-        function reinitIframe() {
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_question");
 
-            var iframe = document.getElementById("frame_question");
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
 
-            try {
-
-                iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;//此為載入網頁之高度
-
-            } catch (ex) { }
-
-        }
-
-        window.setInterval("reinitIframe()", 200);//設定使其每0.2秒執行一次
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
     </script>
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="main">
-        <div class="main-title">
-            <img src="../img/question.png">
-            <h1><a onclick="changeOption2(-1);">Rent Q&A</a></h1>
-        </div>
+      <div class="main-title">
+        <img src="../img/question.png" />
+        <h1><a onclick="changeOption2(-1);">Rent Q&A</a></h1>
+      </div>
 
-        <div class="main-navbar">
-            <ul>
-                <li class="nav-btn">
-                    <a onclick="changeOption2(300);">
-                        Security Deposit/Rental Deposit/Rental Payment Issue
-                    </a>
-                </li>
-                <li class="nav-btn"><a onclick="changeOption2(301);">Signing Issues</a></li>
-                <li class="nav-btn"><a onclick="changeOption2(302);">Repair Issues</a></li>
-                <li class="nav-btn"><a onclick="changeOption2(303);">Privacy Issues</a></li>
-                <li class="nav-btn"><a onclick="changeOption2(304);">Termination/Breach of Contract Issues</a></li>
-                <li class="nav-btn"><a onclick="changeOption2(305);">Utility (Water, Electricity, Gas) Fee Issues</a>
-                </li>
-            </ul>
-        </div>
+      <div class="main-navbar">
+        <ul>
+          <li class="nav-btn">
+            <a onclick="changeOption2(300);">
+              Security Deposit/Rental Deposit/Rental Payment Issue
+            </a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(301);">Signing Issues</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(302);">Repair Issues</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(303);">Privacy Issues</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(304);"
+              >Termination/Breach of Contract Issues</a
+            >
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(305);"
+              >Utility (Water, Electricity, Gas) Fee Issues</a
+            >
+          </li>
+        </ul>
+      </div>
 
-        <div class="main-content">
-            <iframe id="frame_question" scrolling="No" src="" frameborder="0">
-            </iframe>
+      <div class="main-content">
+        <iframe id="frame_question" scrolling="No" src="" frameborder="0">
+        </iframe>
 
-            <p class="dataSource">資料來源: 崔媽媽基金會</p>
-        </div>
+        <p class="dataSource">資料來源: 崔媽媽基金會</p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

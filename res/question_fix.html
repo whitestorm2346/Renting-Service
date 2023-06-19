@@ -9,6 +9,7 @@
     <link href="../css/rightSideDiv.css" rel="stylesheet">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/question.js"></script>
+    <script src="../js/show.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <div class="main-content">
             <div class="main_question">
                 <div class="question">
-                    <h3 onclick="show(this,'answer1')">➥修繕責任該由誰來負責？</h3>
+                    <h3 onclick="display(this,'answer1')">➥修繕責任該由誰來負責？</h3>
                 </div>
                 <div class="answer_2" id="answer1" style="display: none;">
                     <p>依民法429條第一項規定：<b>租賃物之修繕</b>，除契約另訂定或另有習慣
@@ -32,7 +33,7 @@
                         增困擾。</p>
                 </div>
                 <div class="question">
-                    <h3 onclick="show(this,'answer2')">➥搬進去時所附的設備是正常的，可是沒多久卻不能使用了，該由誰來
+                    <h3 onclick="display(this,'answer2')">➥搬進去時所附的設備是正常的，可是沒多久卻不能使用了，該由誰來
                         負責維修？</h3>
                 </div>
                 <div class="answer_2" id="answer2" style="display: none;">
@@ -55,7 +56,7 @@
                 </div>
 
                 <div class="question">
-                    <h3 onclick="show(this,'answer3')">➥幾個月前發現浴室有些微漏水現象，原本不以為意，沒想到最近漏水
+                    <h3 onclick="display(this,'answer3')">➥幾個月前發現浴室有些微漏水現象，原本不以為意，沒想到最近漏水
                         的現象愈演愈烈，通知房東來修，房東卻要我們負擔一半的費用，合理嗎？</h3>
                 </div>
                 <div class="answer_2" id="answer3" style="display: none;">
@@ -72,7 +73,7 @@
                 </div>
 
                 <div class="question">
-                    <h3 onclick="show(this,'answer4')">➥已告知房東有設備需要修繕，但對方一直遲遲未處理，該怎麼辦？</h3>
+                    <h3 onclick="display(this,'answer4')">➥已告知房東有設備需要修繕，但對方一直遲遲未處理，該怎麼辦？</h3>
                 </div>
                 <div class="answer_2" id="answer4" style="display: none;">
                     <p> 民法第430條：「租賃關係存續中，租賃物如有修繕之必要，應由出
@@ -94,7 +95,7 @@
                 </div>
 
                 <div class="question">
-                    <h3 onclick="show(this,'answer5')">➥雙方的修繕責任該要如何簽定在契約書中？</h3>
+                    <h3 onclick="display(this,'answer5')">➥雙方的修繕責任該要如何簽定在契約書中？</h3>
                 </div>
                 <div class="answer_2" id="answer5" style="display: none;">
                     <p> 大概可區分幾種修繕部份—
