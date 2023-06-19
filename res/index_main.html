@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="/css/slick.css" />
     <link rel="stylesheet" type="text/css" href="/css/slick-theme.css" />
-    <link href="../css/index_main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../css/index_main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="../js/index.js"></script>
     <script>
-        function reinitIframe() {
-            var iframe = document.getElementById("frame_content");
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_content");
 
-            try {
-                iframe.height =
-                    iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
-            } catch (ex) { }
-        }
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
 
-        window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
     </script>
     <title>TKU校外賃居服務網</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- VERSION 1 -->
     <!-- <section class="main">
         <div class="background">
             <img src="../img/indexImg1.png" alt="">
@@ -38,68 +42,81 @@
         <img src="../img/indeximg.png" alt="" class="logo">
     </section> -->
 
-    <section class="marquee autoplay">
-        <div class="item">
-            <img src="../img/indexImg1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="../img/indexImg2.png" alt="">
-        </div>
-        <div class="item">
-            <img src="../img/indexImg3.png" alt="">
-        </div>
-        <div class="item">
-            <img src="../img/indexImg4.png" alt="">
-        </div>
-    </section>
+    <!-- VERSION 2 -->
+    <!-- <section class="marquee autoplay">
+      <div class="item">
+        <img src="../img/indexImg1.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="../img/indexImg2.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="../img/indexImg3.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="../img/indexImg4.png" alt="" />
+      </div>
+    </section> -->
 
     <section class="bulletin-board">
-        <h1 class="title">公告事項<i class="fa-solid fa-bullhorn"></i></h1>
-        <div class="container">
-            <a href="/res/download_file/詳細懶人包.pdf" download>
-                <div class="card">
-                    <img src="/img/fee-paying.png" alt="" class="card-img">
+      <h1 class="title">公告事項<i class="fa-solid fa-bullhorn"></i></h1>
+      <div class="container">
+        <a href="/res/download_file/淡水租金.xlsx" download>
+          <div class="card">
+            <img src="/img/rent-price.png" alt="" class="card-img" />
 
-                    <div class="card-info">
-                        <p>
-                            點擊下載完整檔案
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="container">
-            <a href="../finalweb/index.html">
-                <div class="card">
-                    <img src="/img/finalweb.png" alt="" class="card-img">
+            <div class="card-info">
+              <p>點擊下載完整檔案</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="container">
+        <a href="../finalweb/index.html">
+          <div class="card">
+            <img src="/img/finalweb.png" alt="" class="card-img" />
 
-                    <div class="card-info">
-                        <p>
-                            租屋數位學習網
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
+            <div class="card-info">
+              <p>租屋數位學習網</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="container">
+        <a href="/res/download_file/詳細懶人包.pdf" download>
+          <div class="card">
+            <img src="/img/fee-paying.png" alt="" class="card-img" />
+
+            <div class="card-info">
+              <p>點擊下載完整檔案</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="/js/slick.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.autoplay').slick({
-                dots: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                centerMode: true,
-                centerPadding: '0',
-            });
+      $(document).ready(function () {
+        $(".autoplay").slick({
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          centerMode: true,
+          centerPadding: "0",
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
