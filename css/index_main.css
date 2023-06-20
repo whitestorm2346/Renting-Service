@@ -87,9 +87,10 @@ Bulletin Board Section
 
 .container {
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1rem;
 }
 
