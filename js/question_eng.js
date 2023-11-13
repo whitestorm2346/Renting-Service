@@ -36,6 +36,9 @@ function changeFrameURL(option) {
         case 305:
             document.getElementById("frame_question").src = 'question_pay_eng.html';
             break;
+        case 306:
+            document.getElementById("frame_question").src = 'question_subsidy_eng.html';
+            break;
     }
 }
 function changeOption2(option) {
