@@ -6,6 +6,10 @@
   --clr-secondary-light: #5f5346;
   --clr-secondary-dark: #3a3025;
   --clr-grey: #e9e9e9;
+
+  --clr-gradient-bg-1: linear-gradient(to right top, #ffbc85, #ffbf8b, #ffc390, #ffc696, #ffc99c, #ffc9a0, #ffc9a5, #ffc9a9, #ffc6ad, #ffc3b1, #ffc1b6, #ffbfbb);
+  --clr-gradient-bg-2: linear-gradient(to right top, #ffc698, #ffc79a, #ffc99c, #ffca9f, #ffcba1, #ffcda4, #ffd0a7, #ffd2aa, #ffd6af, #ffd9b4, #ffddb9, #ffe0be);
+  --clr-gradient-bg-3: linear-gradient(to top, #fdc8b9, #fec8b5, #ffc9b1, #ffcaad, #ffcba9, #ffcda9, #ffd0aa, #ffd2aa, #ffd6af, #ffd9b4, #ffddb9, #ffe0be);
 }
 
 html {
@@ -74,7 +78,7 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  background-color: #ffcda4;
+  background-image: var(--clr-gradient-bg-3);
 }
 
 .main-navbar li {
@@ -100,7 +104,7 @@ header {
     width: 45%;
     bottom: 4%;
     right: 0;
-    background-color: transparent;
+    background-image: none;
   }
 
   .main-navbar li {
@@ -141,8 +145,9 @@ Main Section Start
 }
 
 .reference {
-  background-color: var(--clr-primary);
+  background-image: var(--clr-gra);
   height: fit-content;
+  background-image: var(--clr-gradient-bg-2);
 }
 
 .nav-title {
@@ -195,7 +200,7 @@ Main Section Start
   }
 
   .reference {
-    background-color: var(--clr-primary);
+    background-image: var(--clr-gradient-bg-2);
     padding-bottom: 2rem;
     height: fit-content;
     border-radius: 20px;
