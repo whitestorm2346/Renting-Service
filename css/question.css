@@ -201,3 +201,37 @@ RWD version
   text-decoration: underline;
 }
 
+.answer_2 ul {
+  text-indent: 0;
+  width: 80%;
+}
+
+.answer_2 ul li {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* .main {
+    width: 95vw;
+  } */
+
+  .main-content {
+    margin: 0 auto;
+  }
+
+  .main_question {
+    margin-left: 0;
+  }
+
+  .answer_1 {
+    margin-left: 0;
+    width: fit-content;
+  }
+
+  .answer_2 {
+    margin-left: 0;
+    width: fit-content;
+  }
+}
