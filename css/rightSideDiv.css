@@ -6,11 +6,13 @@
   --clr-secondary-light: #5f5346;
   --clr-secondary-dark: #3a3025;
   --clr-grey: #e9e9e9;
+
+  --clr-main-bg: #fff3e0;
 }
 
 body {
   font-family: "Microsoft JhengHei";
-  background: #fff3e0;
+  background: transparent;
 }
 
 #mainTitleDiv {

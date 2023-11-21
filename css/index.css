@@ -10,6 +10,8 @@
   --clr-gradient-bg-1: linear-gradient(to right top, #ffbc85, #ffbf8b, #ffc390, #ffc696, #ffc99c, #ffc9a0, #ffc9a5, #ffc9a9, #ffc6ad, #ffc3b1, #ffc1b6, #ffbfbb);
   --clr-gradient-bg-2: linear-gradient(to right top, #ffc698, #ffc79a, #ffc99c, #ffca9f, #ffcba1, #ffcda4, #ffd0a7, #ffd2aa, #ffd6af, #ffd9b4, #ffddb9, #ffe0be);
   --clr-gradient-bg-3: linear-gradient(to top, #fdc8b9, #fec8b5, #ffc9b1, #ffcaad, #ffcba9, #ffcda9, #ffd0aa, #ffd2aa, #ffd6af, #ffd9b4, #ffddb9, #ffe0be);
+
+  --clr-main-gradient-bg: linear-gradient(to right, #ffdfcb, #ffe3ce, #ffe6d2, #ffead6, #ffedda, #ffedda, #ffedda, #ffedda, #ffead6, #ffe6d2, #ffe3ce, #ffdfcb);
 }
 
 html {
@@ -20,7 +22,7 @@ html {
 
 body {
   font-family: "Microsoft JhengHei";
-  background: var(--clr-bg);
+  background: var(--clr-main-gradient-bg);
 }
 
 body,
@@ -145,7 +147,6 @@ Main Section Start
 }
 
 .reference {
-  background-image: var(--clr-gra);
   height: fit-content;
   background-image: var(--clr-gradient-bg-2);
 }
@@ -212,6 +213,10 @@ Main Section Start
     font-size: 1.5rem;
   }
 
+  .nav-title-eng {
+    font-size: 1.15rem;
+  }
+
   .nav-title a {
     display: inline;
   }
@@ -228,6 +233,10 @@ Main Section Start
     display: block;
     margin: 0 auto;
     font-size: 1.2rem;
+  }
+
+  .menu-eng {
+    font-size: 1rem;
   }
 
   .menu li {
