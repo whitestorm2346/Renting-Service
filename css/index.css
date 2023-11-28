@@ -156,12 +156,7 @@ Main Section Start
   font-size: 1.25rem;
 }
 
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
+.menu,
 .inner-menu ul {
   display: none;
 }
@@ -240,10 +235,6 @@ Main Section Start
     font-size: 1.2rem;
   }
 
-  .menu.show-menu {
-    max-height: 500px; /* Adjust this value based on your content height */
-  }
-
   .menu-eng {
     font-size: 1rem;
   }
@@ -308,6 +299,7 @@ Main Section Start
 }
 
 .show-menu {
+  display: block;
   margin-left: 2.2rem;
   padding-bottom: 1rem;
 }
