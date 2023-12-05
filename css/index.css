@@ -12,6 +12,7 @@
   --clr-gradient-bg-3: linear-gradient(to bottom, #ffe6d6, #ffe4d2, #ffe2cf, #ffdfcb, #ffddc8, #ffdbc4, #ffd8c1, #ffd6bd, #ffd3b8, #ffd0b3, #ffceaf, #ffcbaa);
 
   --clr-main-gradient-bg: linear-gradient(to right, #ffdfcb, #ffe3ce, #ffe6d2, #ffead6, #ffedda, #ffedda, #ffedda, #ffedda, #ffead6, #ffe6d2, #ffe3ce, #ffdfcb);
+  --clr-footer-gradient-bg: linear-gradient(to bottom, #ffac9b, #ffa896, #ffa592, #ffa18d, #ff9d89);
 }
 
 html {
@@ -334,31 +335,99 @@ Footer Start
 */
 
 footer {
-  margin: 1rem auto;
+  margin: 0 auto;
+  padding: 3rem 0;
   text-align: center;
+  /* background-color: #ffba60; */
+  background-image: var(--clr-footer-gradient-bg);
+  color: #fff;
 }
 
-.contact {
-  font-size: 1rem;
+.footer-logo {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2rem;
 }
 
-.contact a {
+.footer-logo img {
+  height: 8rem;
+  width: 8rem;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 標楷體;
+  font-weight: normal;
+}
+
+.footer-title-eng {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+}
+
+.subtitle a {
   display: inline;
   font-weight: bold;
   text-decoration: underline;
+  color: #fff;
+}
+
+.contacts {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.contacts-eng {
+  font-size: 1rem;
 }
 
 .copyright {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  .contact {
+  .footer-logo img {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .footer-title {
+    font-size: 4.5rem;
+  }
+
+  .footer-title-eng {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .contacts {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .contacts-eng {
     font-size: 1.2rem;
   }
 
   .copyright {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }
 
