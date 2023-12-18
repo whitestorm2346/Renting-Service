@@ -166,12 +166,15 @@ Main Section Start
   position: relative;
 }
 
-.nav-title h3 {
-  display: inline;
+.nav-title {
+  display: flex;
 }
 
-.nav-title a {
-  display: inline;
+.nav-title h3, .nav-title a {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
 }
 
 .nav-btn {
@@ -190,6 +193,66 @@ Main Section Start
   font-size: 1.5rem;
   color: var(--clr-secondary-light);
   cursor: pointer;
+}
+
+#toggler1, #toggler2 {
+  display: none;
+}
+
+.menu-btn {
+  margin-left: 10px;
+  width: fit-content;
+  height: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-container {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.hamburger-container span {
+  display: block;
+  height: 3px;
+  border-radius: 5rem;
+  background-color: var(--clr-secondary-light);
+  position: relative;
+  transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+  top: 0;
+}
+
+.hamburger-container span:nth-child(2) {
+  margin-top: 4px;
+}
+
+.hamburger-container span:nth-child(3) {
+  margin-top: 4px;
+}
+
+#toggler1:checked + label .hamburger-container {
+  position: relative;
+  top: 4px;
+}
+
+#toggler1:checked + label .hamburger-container span:nth-child(1) {
+  top: 3.9px;
+  transform: rotate(45deg);
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler1:checked + label .hamburger-container span:nth-child(2) {
+  display: none;
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler1:checked + label .hamburger-container span:nth-child(3) {
+  top: -3.9px;
+  transform: rotate(-45deg);
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
 }
 
 @media screen and (min-width: 990px) {
@@ -234,6 +297,10 @@ Main Section Start
     display: block;
     margin: 0 auto;
     font-size: 1.2rem;
+  }
+
+  .menu-btn {
+    display: none;
   }
 
   .menu-eng {

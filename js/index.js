@@ -65,6 +65,7 @@ function changeFrameURL(option) {
         case 10: frame.src = 'contract_eng.html'; break;
         case 17: frame.src = 'communities.html'; break;
         case 18: frame.src = 'communities_eng.html'; break;
+        default: frame.src = 'index_main.html'; break;
     }
 }
 
