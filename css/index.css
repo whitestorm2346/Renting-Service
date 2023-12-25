@@ -239,7 +239,7 @@ Main Section Start
 }
 
 #toggler1:checked + label .hamburger-container span:nth-child(1) {
-  top: 3.9px;
+  top: 4px;
   transform: rotate(45deg);
   transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
 }
@@ -250,7 +250,29 @@ Main Section Start
 }
 
 #toggler1:checked + label .hamburger-container span:nth-child(3) {
-  top: -3.9px;
+  top: -3.5px;
+  transform: rotate(-45deg);
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler2:checked + label .hamburger-container {
+  position: relative;
+  top: 4px;
+}
+
+#toggler2:checked + label .hamburger-container span:nth-child(1) {
+  top: 4px;
+  transform: rotate(45deg);
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler2:checked + label .hamburger-container span:nth-child(2) {
+  display: none;
+  transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler2:checked + label .hamburger-container span:nth-child(3) {
+  top: -3.5px;
   transform: rotate(-45deg);
   transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
 }
