@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TKU校外賃居服務網</title>
+    <link href="../css/rightSideDiv.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/communities.css" />
+    <!-- <link href="../css/download.css" rel="stylesheet"> -->
+    <script>
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_content");
+
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
+
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+    </script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="main-title">
+        <img src="../img/pasta.png" />
+        <h1>學校周邊生活區</h1>
+      </div>
+
+      <div class="main-content">
+        <ul>
+          <li>大學城</li>
+          <li>金雞母</li>
+          <li>大田寮</li>
+          <li>水源街</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
