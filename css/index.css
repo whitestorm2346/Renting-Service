@@ -70,8 +70,9 @@ header {
 .logo {
   position: absolute;
   top: 25%;
-  left: 35%;
+  left: 30%;
   width: 45%;
+  width: 50%;
 }
 
 /* NAVBAR PART */
@@ -94,14 +95,19 @@ header {
 .main-navbar li a {
   display: block;
   text-align: center;
-  text-decoration: underline;
-  font-size: 1.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
   width: fit-content;
   height: 100%;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
+  .logo {
+    left: 35%;
+    width: 40%;
+  }
+
   .main-navbar {
     position: absolute;
     width: 45%;
@@ -460,6 +466,11 @@ footer {
 .footer-title-eng {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2.5rem;
+}
+
+.contents {
+  margin-left: min(10px);
+  margin-right: min(10px);
 }
 
 .subtitle {
