@@ -2,7 +2,7 @@
   --clr-bg: #fff3e0;
   --clr-primary-light: #ffe9cc;
   --clr-primary: #ffdcae;
-  --clr-primary-dark: #ffba60;
+  --clr-primary-dark: #e9b878;
   --clr-secondary-light: #5f5346;
   --clr-secondary-dark: #3a3025;
   --clr-grey: #e9e9e9;
@@ -51,9 +51,82 @@ Header Start
 */
 
 header {
-  position: relative;
-  max-width: 1000px;
   margin: 0 auto;
+}
+
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5vw;
+  padding-right: 10vw;
+  background-color: #ff5858; /* 背景色 */
+}
+
+.tku-title {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.top-navbar-1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.top-navbar-1 li {
+  margin: 0 10px;
+}
+
+.top-navbar-1 li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.top-navbar-1 li a:hover {
+  color: #fff; 
+}
+
+.main-navbar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 15vw;
+  background-color: #f0f0f0; /* 背景色 */
+}
+
+.logo2 {
+  padding-top: 10px;
+  margin: auto 0;
+  height: 5rem;
+}
+
+.main-navbar-1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.main-navbar-1 li {
+  margin: 0 10px;
+  font-size: 1.4rem;
+}
+
+.main-navbar-1 li a {
+  text-decoration: none;
+  color: #333; /* 文字顏色 */
+}
+
+.main-navbar-1 li a:hover {
+  color: #007bff; /* 鼠標懸停時的顏色 */
 }
 
 /* LOGO PART */
