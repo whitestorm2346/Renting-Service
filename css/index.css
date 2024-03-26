@@ -11,8 +11,8 @@
   --clr-gradient-bg-2: linear-gradient(to right top, #ffc698, #ffc79a, #ffc99c, #ffca9f, #ffcba1, #ffcda4, #ffd0a7, #ffd2aa, #ffd6af, #ffd9b4, #ffddb9, #ffe0be);
   --clr-gradient-bg-3: linear-gradient(to bottom, #ffe6d6, #ffe4d2, #ffe2cf, #ffdfcb, #ffddc8, #ffdbc4, #ffd8c1, #ffd6bd, #ffd3b8, #ffd0b3, #ffceaf, #ffcbaa);
 
-  --clr-main-gradient-bg: linear-gradient(to right, #ffdfcb, #ffe3ce, #ffe6d2, #ffead6, #ffedda, #ffedda, #ffedda, #ffedda, #ffead6, #ffe6d2, #ffe3ce, #ffdfcb);
-  --clr-footer-gradient-bg: linear-gradient(to bottom, #ffac9b, #ffa896, #ffa592, #ffa18d, #ff9d89);
+  --clr-main-gradient-bg: radial-gradient(circle, #f4ffe0, #f3ffde, #f1ffdc, #f0ffda, #eeffd8);
+  --clr-footer-gradient-bg: linear-gradient(to bottom, #004f07, #004a05, #004604, #004102, #003d00);
 }
 
 html {
@@ -60,12 +60,13 @@ header {
   justify-content: space-between;
   padding: 5px 5vw;
   padding-right: 10vw;
-  background-color: #ff5858; /* 背景色 */
+  background-image: var(--clr-footer-gradient-bg);
 }
 
 .tku-title {
   font-size: 2rem;
   font-weight: bolder;
+  color: var(--clr-primary-light);
 }
 
 .top-navbar-1 {
@@ -84,7 +85,7 @@ header {
 .top-navbar-1 li a {
   font-size: 1rem;
   text-decoration: none;
-  color: #333;
+  color: var(--clr-primary-light);
 }
 
 .top-navbar-1 li a:hover {
@@ -92,41 +93,97 @@ header {
 }
 
 .main-navbar2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   height: 6rem;
-  padding: 0 15vw;
-  background-color: #f0f0f0; /* 背景色 */
+  background-color: #bdddc5; /* 背景色 */
 }
 
 .logo2 {
   padding-top: 10px;
   margin: auto 0;
+  margin-left: 4rem;
   height: 5rem;
 }
 
 .main-navbar-1 {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  align-items: center;
+  max-width: 80%;
 }
 
 .main-navbar-1 li {
-  margin: 0 10px;
-  font-size: 1.4rem;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.inner-menu2 {
+  position: relative;
+}
+
+.inner-menu2 ul {
+  display: none;
 }
 
 .main-navbar-1 li a {
   text-decoration: none;
+  padding: .5rem 1rem;
+  width: fit-content;
+  font-weight: bold;
   color: #333; /* 文字顏色 */
 }
 
+.main-navbar-1 li:hover {
+  background-color: #408138;
+  border-radius: 5rem;
+  color: var(--clr-primary-light);
+}
+
+.main-navbar-1 li:hover a {
+  color: var(--clr-primary-light);
+}
+
 .main-navbar-1 li a:hover {
-  color: #007bff; /* 鼠標懸停時的顏色 */
+  cursor: pointer;
+}
+
+.inner-menu2:hover ul {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  padding: .5rem 1rem;
+  padding-bottom: 0;
+  display: block;
+  height: fit-content;
+  background-color: #bdddc5;
+}
+
+.inner-menu2:hover ul li {
+  margin: 1rem 0;
+  line-height: 1.2rem;
+  background-color: #d3e6ce;
+  border-radius: 5px;
+}
+
+.inner-menu2:hover ul li a {
+  text-wrap: nowrap;
+  background-color: transparent;
+  color: #333;
+  font-weight: normal;
+}
+
+.inner-menu2:hover ul li:hover {
+  background-color: #00683C;
+}
+
+.inner-menu2:hover ul li:hover a {
+  width: 100%;
+  color: var(--clr-primary-light);
+  cursor: pointer;
 }
 
 /* LOGO PART */
