@@ -371,6 +371,14 @@ header {
   }
 }
 
+@media screen and (max-width: 750px) {
+  .top-navbar-1 {
+    padding: 0c;
+    margin: 0;
+    width: 100vw;
+  }
+}
+
 /*
 ========================================
 Header End
