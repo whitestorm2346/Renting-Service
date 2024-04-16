@@ -92,7 +92,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   height: 6rem;
-  background-color: #aacfb4; /* 背景色 */
+  background-color: #90c29d; /* 背景色 */
 }
 
 .menu-btn2 {
@@ -507,7 +507,7 @@ footer {
   text-align: center;
   /* background-color: #ffba60; */
   background-image: var(--clr-footer-gradient-bg);
-  color: #fff;
+  color: var(--clr-primary-light);
 }
 
 .footer-logo {
@@ -553,7 +553,7 @@ footer {
   display: inline;
   font-weight: bold;
   text-decoration: underline;
-  color: #fff;
+  color: var(--clr-primary);
 }
 
 .contacts {
