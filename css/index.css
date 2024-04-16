@@ -52,6 +52,9 @@ Header Start
 
 header {
   margin: 0 auto;
+  position: sticky;
+  top: -2.6rem;
+  left: 0;
 }
 
 .top-navbar {
@@ -89,7 +92,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   height: 6rem;
-  background-color: #bdddc5; /* 背景色 */
+  background-color: #aacfb4; /* 背景色 */
 }
 
 .menu-btn2 {
@@ -347,28 +350,6 @@ header {
     transform: rotate(-45deg);
     transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
   }
-  
-  #toggler2:checked + label .hamburger-container {
-    position: relative;
-    top: 4px;
-  }
-  
-  #toggler2:checked + label .hamburger-container span:nth-child(1) {
-    top: 4px;
-    transform: rotate(45deg);
-    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
-  }
-  
-  #toggler2:checked + label .hamburger-container span:nth-child(2) {
-    display: none;
-    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
-  }
-  
-  #toggler2:checked + label .hamburger-container span:nth-child(3) {
-    top: -3.5px;
-    transform: rotate(-45deg);
-    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -376,6 +357,64 @@ header {
     padding: 0c;
     margin: 0;
     width: 100vw;
+  }
+
+  .main-navbar2 {
+    padding: 1rem;
+  }
+
+  .renting-title {
+    font-size: 1.75rem;
+  }
+
+  .tku-subtitle {
+    font-size: 1rem;
+  }
+
+  .hamburger-container {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .hamburger-container span {
+    display: block;
+    height: 4px;
+    border-radius: 5rem;
+    background-color: var(--clr-secondary-light);
+    position: relative;
+    transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+    top: 0;
+  }
+  
+  .hamburger-container span:nth-child(2) {
+    margin-top: 6px;
+  }
+  
+  .hamburger-container span:nth-child(3) {
+    margin-top: 6px;
+  }
+  
+  #toggler1:checked + label .hamburger-container {
+    position: relative;
+    top: 6px;
+  }
+  
+  #toggler1:checked + label .hamburger-container span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+  }
+  
+  #toggler1:checked + label .hamburger-container span:nth-child(2) {
+    display: none;
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+  }
+  
+  #toggler1:checked + label .hamburger-container span:nth-child(3) {
+    top: -3.5px;
+    transform: rotate(-45deg);
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
   }
 }
 
