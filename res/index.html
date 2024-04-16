@@ -66,10 +66,21 @@
 
       <div class="main-navbar2">
         <div class="renting-service-logo">
-          <a href="index.html"
-            ><img src="../img/logo.png" alt="校外賃居服務網" class="logo2"
-          /></a>
+          <a href="index.html">
+            <img src="../img/logo.png" alt="校外賃居服務網" class="logo2" />
+            <p class="renting-title">校外賃居服務網</p>
+            <p class="tku-subtitle">淡江大學 Tamkang University</p>
+          </a>
         </div>
+
+        <input type="checkbox" id="toggler1" />
+        <label for="toggler1" class="menu-btn menu-btn-1">
+          <div class="hamburger-container">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
 
         <ul class="main-navbar-1">
           <li class="inner-menu2">
@@ -131,209 +142,9 @@
           </li>
         </ul>
       </div>
-
-      <!-- <div class="top-logo">
-        <img src="../img/title1_bar2.png" alt="TKU Background" class="bg" />
-        <a href="index.html"
-          ><img src="../img/logo.png" alt="校外賃居服務網" class="logo"
-        /></a>
-      </div> -->
-
-      <!-- <ul class="main-navbar">
-        <li><a href="./index_eng.html">English</a></li>
-        <li><a href="http://www.tku.edu.tw/">淡江大學首頁</a></li>
-        <li>
-          <a href="http://www.military.tku.edu.tw/main.php">軍訓室首頁</a>
-        </li>
-        <li><a href="http://rent.tku-csie.net/">管理員登入</a></li>
-      </ul> -->
     </header>
 
     <section class="main">
-      <nav class="reference">
-        <div class="nav-title">
-          <h3><a href="index.html">租屋相關資訊</a></h3>
-          <!-- <button class="nav-btn" id="nav-btn-1">
-            <i class="fas fa-bars"></i>
-          </button>
-          <button class="close-btn hide-btn" id="close-btn-1">
-            <i class="fas fa-times"></i>
-          </button> -->
-          <input type="checkbox" id="toggler1" />
-          <label for="toggler1" class="menu-btn menu-btn-1">
-            <div class="hamburger-container">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </label>
-        </div>
-
-        <ul class="menu" id="menu-1">
-          <li>
-            <a href="https://house.nfu.edu.tw/TKU" target="_blank"
-              >雲端租屋生活網</a
-            >
-          </li>
-
-          <li><a onclick="changeOption(1);">租屋安全宣導</a></li>
-
-          <li class="inner-menu">
-            <a onclick="changeOption(2)">租屋注意事項</a>
-
-            <ul>
-              <li>
-                <a onclick="changeOption(201);"
-                  ><span>租屋建議注意事項</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(202);"
-                  ><span>退租還屋注意事項</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(203);"><span>租屋教戰守則</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(204);"><span>常見租屋糾紛</span></a>
-              </li>
-            </ul>
-          </li>
-
-          <li><a onclick="changeOption(3);">租屋常見Q&A</a></li>
-
-          <li class="inner-menu">
-            <a onclick="changeOption(4);">租屋相關法律資訊</a>
-
-            <ul>
-              <li>
-                <a onclick="changeOption(401);"><span>存證信函</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(402);"
-                  ><span>房屋租賃契約公證</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(403);"><span>選擇訂約對象</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(404);"
-                  ><span>租賃法律關係概說</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(405);"><span>租屋糾紛解決</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(406);"
-                  ><span>租屋相關法律條文</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(407);"
-                  ><span>租約內容注意事項</span></a
-                >
-              </li>
-              <li>
-                <a onclick="changeOption(408);"><span>租約之履行</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(409);"><span>租約相關法律</span></a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="inner-menu">
-            <a onclick="changeOption(5);">租賃宣導影片</a>
-
-            <ul>
-              <li>
-                <a onclick="changeOption(501);"><span>糾紛</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(502);"><span>居住安全</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(503);"><span>賃居宣導</span></a>
-              </li>
-              <li>
-                <a onclick="changeOption(504);"><span>用電</span></a>
-              </li>
-            </ul>
-          </li>
-
-          <li><a onclick="changeOption(6);">租屋相關表格下載</a></li>
-
-          <li>
-            <a target="_blank" href="https://www.land.moi.gov.tw/chhtml/news/89"
-              >租屋條例專區</a
-            >
-          </li>
-          <li><a onclick="changeOption(9);">租屋懶人包</a></li>
-          <li><a onclick="changeOption(17);">學校周邊大型社區</a></li>
-          <li><a onclick="changeOption(19);">學校周邊生活區</a></li>
-        </ul>
-
-        <div class="nav-title">
-          <h3>友善連結</h3>
-          <!-- <button class="nav-btn" id="nav-btn-2">
-            <i class="fas fa-bars"></i>
-          </button>
-          <button class="close-btn hide-btn" id="close-btn-2">
-            <i class="fas fa-times"></i>
-          </button> -->
-          <input type="checkbox" id="toggler2" />
-          <label for="toggler2" class="menu-btn menu-btn-2">
-            <div class="hamburger-container">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </label>
-        </div>
-
-        <ul class="menu" id="menu-2">
-          <li>
-            <a href="https://www.tmm.org.tw/"><span>崔媽媽基金會</span></a>
-          </li>
-          <li>
-            <a href="https://www.tmm.org.tw/contents/p_cont?id=65"
-              ><span>崔媽媽回頭車共乘服務</span></a
-            >
-          </li>
-          <li>
-            <a href="https://csrc.nfu.edu.tw/"><span>教育部賃居服務網</span></a>
-          </li>
-          <li>
-            <a href="https://lvr.land.moi.gov.tw/"
-              ><span>內政部租賃時價查詢服務網</span></a
-            >
-          </li>
-          <li>
-            <a href="https://nprent.cpami.gov.tw/nprent/"
-              ><span>公益出租人查詢網</span></a
-            >
-          </li>
-          <li>
-            <a href="https://pip.moi.gov.tw/V3/B/SCRB0501.aspx?mode=9"
-              ><span>社會住宅包租代管</span></a
-            >
-          </li>
-          <li>
-            <a href="https://welfare.ntpc.gov.tw/"
-              ><span>新北市福利補助</span></a
-            >
-          </li>
-          <li>
-            <a href="https://pip.moi.gov.tw/V3/Default.aspx"
-              ><span>內政部不動產資訊平臺</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-
       <div class="main-frame">
         <iframe
           id="frame_content"
