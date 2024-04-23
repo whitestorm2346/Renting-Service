@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TKU校外賃居服務網</title>
-    <link href="../css/index.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -12,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="../css/index.css" rel="stylesheet" />
     <!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/index.js"></script>
@@ -82,14 +82,26 @@
           </div>
         </label>
 
-        <ul class="main-navbar-1">
-          <li class="inner-menu2">
+        <ul class="main-navbar-1 hide-menu" id="menu-1">
+          <li>
             <a href="index.html">公告事項</a>
           </li>
           <li class="inner-menu2">
-            <a onclick="changeOption(1);">安全宣導</a>
+            <a onclick="changeOption(1);"
+              >安全宣導
+              <span>
+                <i
+                  class="fa-solid fa-angle-down"
+                  id="show-inner-menu-btn-1"
+                ></i>
+                <i
+                  class="fa-solid fa-angle-up hide-btn"
+                  id="hide-inner-menu-btn-1"
+                ></i>
+              </span>
+            </a>
 
-            <ul>
+            <ul id="inner-menu2-1">
               <li><a>消防安全</a></li>
               <li><a>建物安全</a></li>
               <li><a>租屋簽約</a></li>
@@ -97,7 +109,19 @@
             </ul>
           </li>
           <li class="inner-menu2">
-            <a>校園周邊資訊</a>
+            <a
+              >校園周邊資訊
+              <span>
+                <i
+                  class="fa-solid fa-angle-down"
+                  id="show-inner-menu-btn-2"
+                ></i>
+                <i
+                  class="fa-solid fa-angle-up hide-btn"
+                  id="hide-inner-menu-btn-2"
+                ></i>
+              </span>
+            </a>
 
             <ul>
               <li><a onclick="changeOption(17)">校園周邊大型社區</a></li>
@@ -105,7 +129,19 @@
             </ul>
           </li>
           <li class="inner-menu2">
-            <a>友善連結</a>
+            <a
+              >友善連結
+              <span>
+                <i
+                  class="fa-solid fa-angle-down"
+                  id="show-inner-menu-btn-3"
+                ></i>
+                <i
+                  class="fa-solid fa-angle-up hide-btn"
+                  id="hide-inner-menu-btn-3"
+                ></i>
+              </span>
+            </a>
 
             <ul>
               <li><a href="https://www.tmm.org.tw/">崔媽媽基金會</a></li>
