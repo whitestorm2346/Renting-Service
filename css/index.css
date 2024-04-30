@@ -150,7 +150,7 @@ header {
   color: #333; /* 文字顏色 */
 }
 
-.main-navbar-1 li a span {
+.main-navbar-1 li span {
   display: none;
 }
 
@@ -317,21 +317,18 @@ header {
     margin-bottom: 1rem;
   }
 
-  .main-navbar-1 li:hover {
-    display: block;
-  }
-
-  .main-navbar-1 li a {
+  .bar {
     width: 80vw;
-    font-size: 1.75rem;
-    border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    border-bottom: 1px solid #000;
+    font-size: 1.75rem;
   }
 
-  .main-navbar-1 li a span {
-    display: contents;
+  .main-navbar-1 li span {
+    display: grid;
+    place-items: center;
   }
 
   .show-menu {

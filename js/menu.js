@@ -1,7 +1,6 @@
 const menubtn1 = document.querySelector("#toggler1");
 const menu1 = document.querySelector("#menu-1");
 
-
 menubtn1.addEventListener("click", function () {
     if(menubtn1.checked) {
         menu1.classList.add("show-menu");
@@ -13,6 +12,8 @@ menubtn1.addEventListener("click", function () {
     }
 });
 
+
+// inner menu part 
 
 function showInnerMenu(index) {
     for(var i = 1; i <= 3; i++){
@@ -52,10 +53,21 @@ function hideInnerMenu(index) {
     inner_menu.classList.remove("show-inner-menu")
 }
 
-for(var i = 1; i <= 3; i++){
-    var hide_btn = document.querySelector("#hide-inner-menu-btn-" + index)
-    var show_btn = document.querySelector("#show-inner-menu-btn-" + index)
+document.querySelector("#angle-btn-1").addEventListener(
+    "click",
+    () => {
+        
+    }
+)
+document.querySelector("#angle-btn-2").addEventListener(
+    "click",
+    () => {
 
-    show_btn.addEventListener("click", showInnerMenu(i))
-    hide_btn.addEventListener("click", hideInnerMenu(i))
-}
+    }
+)
+document.querySelector("#angle-btn-3").addEventListener(
+    "click",
+    () => {
+
+    }
+)

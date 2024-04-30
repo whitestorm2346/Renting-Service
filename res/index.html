@@ -84,12 +84,15 @@
 
         <ul class="main-navbar-1 hide-menu" id="menu-1">
           <li>
-            <a href="index.html">公告事項</a>
+            <div class="bar">
+              <a href="index.html">公告事項</a>
+            </div>
           </li>
           <li class="inner-menu2">
-            <a onclick="changeOption(1);"
-              >安全宣導
-              <span>
+            <div class="bar">
+              <a onclick="changeOption(1);">安全宣導 </a>
+
+              <span id="angle-btn-1">
                 <i
                   class="fa-solid fa-angle-down"
                   id="show-inner-menu-btn-1"
@@ -99,7 +102,7 @@
                   id="hide-inner-menu-btn-1"
                 ></i>
               </span>
-            </a>
+            </div>
 
             <ul id="inner-menu2-1">
               <li><a>消防安全</a></li>
@@ -109,9 +112,10 @@
             </ul>
           </li>
           <li class="inner-menu2">
-            <a
-              >校園周邊資訊
-              <span>
+            <div class="bar">
+              <a>校園周邊資訊 </a>
+
+              <span id="angle-btn-2">
                 <i
                   class="fa-solid fa-angle-down"
                   id="show-inner-menu-btn-2"
@@ -121,17 +125,22 @@
                   id="hide-inner-menu-btn-2"
                 ></i>
               </span>
-            </a>
+            </div>
 
-            <ul>
-              <li><a onclick="changeOption(17)">校園周邊大型社區</a></li>
-              <li><a onclick="changeOption(19)">校園周邊生活區</a></li>
+            <ul id="inner-menu2-2">
+              <li>
+                <a onclick="changeOption(17)">校園周邊大型社區</a>
+              </li>
+              <li>
+                <a onclick="changeOption(19)">校園周邊生活區</a>
+              </li>
             </ul>
           </li>
           <li class="inner-menu2">
-            <a
-              >友善連結
-              <span>
+            <div class="bar">
+              <a>友善連結 </a>
+
+              <span id="angle-btn-3">
                 <i
                   class="fa-solid fa-angle-down"
                   id="show-inner-menu-btn-3"
@@ -141,9 +150,9 @@
                   id="hide-inner-menu-btn-3"
                 ></i>
               </span>
-            </a>
+            </div>
 
-            <ul>
+            <ul id="inner-menu2-3">
               <li><a href="https://www.tmm.org.tw/">崔媽媽基金會</a></li>
               <li><a href="https://csrc.nfu.edu.tw/">教育部賃居服務網</a></li>
               <li>
@@ -174,7 +183,9 @@
             </ul>
           </li>
           <li>
-            <a onclick="changeOption(6)">表單下載</a>
+            <div class="bar">
+              <a onclick="changeOption(6)">表單下載</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -219,7 +230,7 @@
             <i class="fa-solid fa-fax"></i> 886-2-26265849
           </li>
         </ul>
-        <div class="copyright">&copy;2023 Design by TseHsunYu</div>
+        <div class="copyright">&copy;2024 Design by TseHsunYu</div>
       </div>
     </footer>
   </body>
