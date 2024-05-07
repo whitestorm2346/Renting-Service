@@ -150,7 +150,7 @@ header {
   color: #333; /* 文字顏色 */
 }
 
-.main-navbar-1 li span {
+.main-navbar-1 li i {
   display: none;
 }
 
@@ -326,7 +326,7 @@ header {
     font-size: 1.75rem;
   }
 
-  .main-navbar-1 li span {
+  .main-navbar-1 li i {
     display: grid;
     place-items: center;
   }
