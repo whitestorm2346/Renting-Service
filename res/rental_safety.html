@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TKU校外賃居服務網</title>
+    <link href="../css/rental_safety.css" rel="stylesheet" />
+    <link href="../css/rightSideDiv.css" rel="stylesheet" />
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/rental_safety.js"></script>
+    <script>
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_school_area_info");
+
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
+
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+    </script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="main-title">
+        <img src="../img/alarm.png" />
+        <h1><a onclick="changeOption2(-1);">租屋安全</a></h1>
+      </div>
+
+      <div class="main-navbar">
+        <ul>
+          <li class="nav-btn">
+            <a onclick="changeOption2(300);">消防建物安全</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(301);">租屋注意事項</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(302);">租屋簽約範本</a>
+          </li>
+          <li class="nav-btn">
+            <a onclick="changeOption2(303);">相關法律問題</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <iframe id="frame_rental_safety" scrolling="No" src="" frameborder="0">
+        </iframe>
+      </div>
+    </div>
+  </body>
+</html>

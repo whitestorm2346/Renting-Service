@@ -67,6 +67,10 @@ function changeFrameURL(option) {
         case 18: frame.src = 'communities_eng.html'; break;
         case 19: frame.src = 'common_pages/fixing.html'; break; // fixing
         case 20: frame.src = 'common_pages/fixing_eng.html'; break; // fixing
+        case 21: frame.src = 'school_area_info.html'; break;
+        case 22: frame.src = 'school_area_info_eng.html'; break; // uncreate
+        case 23: frame.src = 'rental_safety.html'; break;
+        case 24: frame.src = 'rental_safety_eng.html'; break; // uncreate
         default: frame.src = 'index_main.html'; break;
     }
 }

@@ -16,29 +16,10 @@ menubtn1.addEventListener("click", function () {
 // inner menu part 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // var inner_menus = document.querySelectorAll('.inner-menu2')
+    var inner_menus = document.querySelectorAll('.inner-menu2')
 
-    // inner_menus.forEach(function(inner_menu) {
-    //     var icon = bar.querySelector('i.fa-angle-down')
-
-    //     if (icon) { // 檢查是否找到 i.fa-angle-down 元素
-    //         icon.addEventListener('click', function() {
-    //         icon.classList.toggle('fa-angle-down')
-    //         icon.classList.toggle('fa-angle-up')
-
-    //         bars.forEach(function(otherBar) {
-    //             if (otherBar !== bar && otherBar.querySelector('i.fa-angle-down')) {
-    //                 otherBar.querySelector('i').classList.remove('fa-angle-up')
-    //                 otherBar.querySelector('i').classList.add('fa-angle-down')
-    //             }
-    //         })
-    //     } 
-    //     })
-
-
-    var bars = document.querySelectorAll('.bar')
-
-    bars.forEach(function(bar) {
+    inner_menus.forEach(function(inner_menu) {
+      var bar = inner_menu.querySelector('.bar')
       var icon = bar.querySelector('i.fa-angle-down')
 
       if (icon) { // 檢查是否找到 i.fa-angle-down 元素
@@ -46,27 +27,44 @@ document.addEventListener("DOMContentLoaded", function() {
           icon.classList.toggle('fa-angle-down')
           icon.classList.toggle('fa-angle-up')
 
-          bars.forEach(function(otherBar) {
-            if (otherBar !== bar && otherBar.querySelector('i.fa-angle-down')) {
-              otherBar.querySelector('i').classList.remove('fa-angle-up')
-              otherBar.querySelector('i').classList.add('fa-angle-down')
-            }
+          var ul = inner_menu.querySelector('ul')
+
+          if (icon.classList.contains('fa-angle-up')) {
+            ul.style.display = 'block'
+          }
+          else {
+            ul.style.display = 'none'
+          }
+
+          inner_menus.forEach(function(otherInnerMenu) {
+              if (otherInnerMenu !== inner_menu) {
+                var otherBar = otherInnerMenu.querySelector('.bar')
+                var otherIcon = otherBar.querySelector('i.fa-angle-up')
+                var otherUl = otherInnerMenu.querySelector('ul')
+
+                if (otherIcon) {
+                  otherInnerMenu.querySelector('.bar > i').classList.remove('fa-angle-up')
+                  otherInnerMenu.querySelector('.bar > i').classList.add('fa-angle-down')
+
+                  otherUl.style.display = 'none'
+                }
+              }
           })
-        })
+        }) 
       }
     })
 })
 
-document.getElementById("show-inner-menu-btn-1").addEventListener(
-    "click", 
-    function() {
-        var ulElement = document.getElementById("inner-menu2-1");
-        var iconElement = document.getElementById("show-inner-menu-btn-1");
+// document.getElementById("show-inner-menu-btn-1").addEventListener(
+//     "click", 
+//     function() {
+//         var ulElement = document.getElementById("inner-menu2-1");
+//         var iconElement = document.getElementById("show-inner-menu-btn-1");
         
-        if (iconElement.classList.contains("fa-angle-up")) {
-            ulElement.style.display = "block";
-        } else {
-            ulElement.style.display = "none";
-        }
-    }
-);
+//         if (iconElement.classList.contains("fa-angle-up")) {
+//             ulElement.style.display = "block";
+//         } else {
+//             ulElement.style.display = "none";
+//         }
+//     }
+// );
