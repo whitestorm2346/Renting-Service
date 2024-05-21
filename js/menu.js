@@ -5,10 +5,12 @@ menubtn1.addEventListener("click", function () {
     if(menubtn1.checked) {
         menu1.classList.add("show-menu");
         menu1.classList.remove("hide-menu");
+        // console.log("Show Menu");
     }
     else {
         menu1.classList.add("hide-menu");
         menu1.classList.remove("show-menu");
+        // console.log("Hide Menu");
     }
 });
 
@@ -54,17 +56,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
 })
-
-// document.getElementById("show-inner-menu-btn-1").addEventListener(
-//     "click", 
-//     function() {
-//         var ulElement = document.getElementById("inner-menu2-1");
-//         var iconElement = document.getElementById("show-inner-menu-btn-1");
-        
-//         if (iconElement.classList.contains("fa-angle-up")) {
-//             ulElement.style.display = "block";
-//         } else {
-//             ulElement.style.display = "none";
-//         }
-//     }
-// );
