@@ -81,11 +81,11 @@ header {
 .top-navbar-1 li a {
   font-size: 1rem;
   text-decoration: none;
-  color: var(--clr-primary-light);
+  color: #fff;
 }
 
 .top-navbar-1 li a:hover {
-  color: #fff; 
+  color: var(--clr-primary-light); 
 }
 
 .main-navbar2 {
