@@ -85,7 +85,58 @@ Bulletin Board Section
   padding-left: 1rem;
 }
 
-.container {
+.line-container {
+  width: 100%;
+  display: grid;
+  row-gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  width: 98%;
+  margin: 0 auto;
+  background-color: #ffdcae;
+  padding: 5px ;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.line:hover {
+  background-color: #ffc343;
+}
+
+.line-icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #3a3025;
+}
+
+.line:hover .line-icon {
+  color: #fff;
+}
+
+.line-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #021b12;
+  text-align: center;
+  margin: auto 0;
+}
+
+@media screen and (max-width: 700px) {
+  .line-text {
+    font-size: 1rem;
+  }
+}
+
+.line:hover .line-text {
+  text-shadow: #fff 1px 1px ;
+}
+
+.card-container {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -93,7 +144,7 @@ Bulletin Board Section
   row-gap: 1.5rem;
 }
 
-a {
+.card-container a {
   display: block;
   width: 21rem;
   height: 12rem;
