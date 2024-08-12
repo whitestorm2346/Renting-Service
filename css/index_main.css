@@ -97,32 +97,31 @@ Bulletin Board Section
   grid-template-columns: 1fr 10fr;
   width: 98%;
   margin: 0 auto;
-  background-color: #ffdcae;
+  background-color: #dfbb93;
   padding: 5px ;
   border-radius: 30px;
   text-decoration: none;
 }
 
 .line:hover {
-  background-color: #ffc343;
+  background-color: #f7d8b6;
 }
 
 .line-icon {
   display: grid;
   place-items: center;
   font-size: 1.7rem;
-  color: #3a3025;
+  color: #fff;
 }
 
 .line:hover .line-icon {
-  color: #fff;
+  color: #383838;
 }
 
 .line-text {
   font-size: 1.3rem;
   font-weight: bold;
   color: #021b12;
-  text-align: center;
   margin: auto 0;
 }
 
