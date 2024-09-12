@@ -142,9 +142,24 @@ header {
   display: none;
 }
 
+.inner-menu2 ul li a {
+  position: relative;
+}
+
+.inner-menu2 ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 95%;
+  height: 1px;
+  background-color: #92b198;
+  transform: translateX(-50%);
+}
+
 .main-navbar-1 li a {
   text-decoration: none;
-  padding: .5rem 1rem;
+  padding: 1rem 1rem;
   width: fit-content;
   font-weight: bold;
   color: #333; /* 文字顏色 */
@@ -168,7 +183,11 @@ header {
   .main-navbar-1 li a:hover {
     cursor: pointer;
   }
-  
+
+  .inner-menu2 ul li a::after {
+    display: none;
+  }
+
   .inner-menu2:hover ul {
     position: absolute;
     top: 100%;
@@ -308,9 +327,12 @@ header {
     left: 0;
     background-color: #cfe6d5;
     width: 100vw;
+    max-height: 85vh;
     display: grid;
     place-items: center;
     padding: 1.5rem 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .main-navbar-1 li {
