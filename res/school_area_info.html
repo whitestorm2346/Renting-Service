@@ -7,7 +7,7 @@
     <link href="../css/school_area_info.css" rel="stylesheet" />
     <link href="../css/rightSideDiv.css" rel="stylesheet" />
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/school_area_info.js"></script>
+    <!-- <script src="../js/school_area_info.js"></script> -->
     <script>
       function reinitIframe() {
         var iframe = document.getElementById("frame_school_area_info");
@@ -26,19 +26,19 @@
     <div class="main">
       <div class="main-title">
         <img src="../img/question.png" />
-        <h1><a onclick="changeOption2(-1);">校園周邊生活資訊</a></h1>
+        <h1>校園周邊生活資訊</h1>
       </div>
 
       <div class="main-navbar">
         <ul>
           <li class="nav-btn">
-            <a onclick="changeOption2(302);">醫療機構</a>
+            <a href="#medical">醫療單位</a>
           </li>
           <li class="nav-btn">
-            <a onclick="changeOption2(303);">消防局</a>
+            <a href="#police">警察單位</a>
           </li>
           <li class="nav-btn">
-            <a onclick="changeOption2(304);">警局</a>
+            <a href="#firefighting">消防單位</a>
           </li>
           <!-- <li class="nav-btn">
             <a onclick="changeOption2(300);">校園周邊大型社區</a>
@@ -50,13 +50,130 @@
       </div>
 
       <div class="main-content">
-        <iframe
-          id="frame_school_area_info"
-          scrolling="No"
-          src=""
-          frameborder="0"
-        >
-        </iframe>
+        <section id="medical">
+          <div class="main-title">
+            <img src="../img/hospital-solid.png" />
+            <h1>醫療機構</h1>
+          </div>
+
+          <div class="section-content">
+            <ul class="links">
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1805.3834392628014!2d121.44641203347001!3d25.177348230594752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442afff18ffa193%3A0xcf8290b2f51eb8ef!2z5rC056KT55Ge5a6J6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726109271377!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">水碓瑞安診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6995675922467!2d121.44772397607346!3d25.17962027772228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442affe16d00d9f%3A0x4bcf899cae4efa37!2z6I-v55Sf5a626Yar56eR55qu6Iaa56eR6IGv5ZCI6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726191255546!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">華生家醫科皮膚科聯合診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.747471647533!2d121.44024605876524!3d25.178003319789255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a554342dc01b%3A0xf816a72c79f19ec4!2z5oGp5Y-L6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726109586076!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">恩友診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.747471647533!2d121.44024605876524!3d25.178003319789255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a555cbaf9389%3A0x406cd1d5e4f6bdf9!2z5qau6Iqz6aqo56eR6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726109633237!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">榮芳骨科診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1805.3506194777128!2d121.44917632395612!3d25.179563864008454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442affe11bc1973%3A0xbb171466132e2711!2z56WQ5a6J5Lit6Yar6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726191355946!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">祐安中醫診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9116296844045!2d121.44323307607318!3d25.172461577726992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aff80a25b497%3A0x8e57886b654d468f!2z5bu66aCG5Lit6Yar6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726191448858!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">建順中醫診所</span></a
+                >
+              </li>
+              <li class="link">
+                <a href="" class="path"
+                  ><div class="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.68326556487392!2d121.44554894417527!3d25.171765417024833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aff8091fec25%3A0xfc3db2a037827e00!2z6Iux5bCI6ICz6by75ZaJ56eR55qu6Iaa56eR6IGv5ZCI6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1726190909284!5m2!1szh-TW!2stw"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <span class="title">英專耳鼻喉科皮膚科聯合診所</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="police">
+          <div class="main-title">
+            <img src="../img/building-shield-solid.png" />
+            <h1>警局</h1>
+          </div>
+
+          <div class="section-content">
+            <ul class="links"></ul>
+          </div>
+        </section>
+
+        <section id="firefighting">
+          <div class="main-title">
+            <img src="../img/fire-extinguisher-solid.png" />
+            <h1>消防局</h1>
+          </div>
+
+          <div class="section-content">
+            <ul class="links"></ul>
+          </div>
+        </section>
       </div>
     </div>
   </body>

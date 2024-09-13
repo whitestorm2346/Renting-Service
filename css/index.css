@@ -142,6 +142,10 @@ header {
   display: none;
 }
 
+.inner-menu2 ul li {
+  width: 95%;
+}
+
 .inner-menu2 ul li a {
   position: relative;
 }
@@ -149,7 +153,7 @@ header {
 .inner-menu2 ul li a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 50%;
   width: 95%;
   height: 1px;
