@@ -188,6 +188,10 @@ header {
     cursor: pointer;
   }
 
+  .inner-menu2 ul li {
+    width: 100%;
+  }
+
   .inner-menu2 ul li a::after {
     display: none;
   }
@@ -374,8 +378,8 @@ header {
   }
 
   .inner-menu2 ul li a {
-    width: 90%;
-    padding-left: 2rem;
+    /* width: 100%; */
+    /* padding-left: 2rem; */
     cursor: pointer;
     border-radius: 10px;
   }

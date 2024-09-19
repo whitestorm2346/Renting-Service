@@ -259,7 +259,7 @@ RWD version
   /* background-color: #197526; */
   background-image: linear-gradient(to bottom, #5b9d1e, #4b8d17, #3c7d0f, #2c6d06, #1d5e00);
   display: grid;
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 3fr 2fr;
   place-items: center;
 }
 
@@ -283,6 +283,7 @@ RWD version
   width: 38vw;
   height: 38vw;
   border-radius: 50%;
+  border: 2px solid #866942;
 }
 
 .link .path span {
