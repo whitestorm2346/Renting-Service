@@ -287,8 +287,14 @@ RWD version
 }
 
 .link .path span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   padding: 1rem 2rem;
   color: antiquewhite;
+}
+
+@media screen and (max-width: 600px) {
+  .link .path span {
+    font-size: .8rem;
+  }
 }
