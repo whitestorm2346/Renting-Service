@@ -237,14 +237,14 @@ RWD version
 }
 
 .section-content {
-  width: fit-content;
+  width: 95%;
+  margin: 10vw auto;
 }
 
 .links {
   display: grid;
-  row-gap: 4rem;
-  width: 90%;
-  margin: 0 auto;
+  row-gap: 30vw;
+  width: 95%;
   padding: 6rem 0;
   list-style-type: none;
 }
@@ -256,26 +256,38 @@ RWD version
 .link .path {
   border-radius: 50rem;
   z-index: -2;
-  background-color: #fff;
+  /* background-color: #197526; */
+  background-image: linear-gradient(to bottom, #5b9d1e, #4b8d17, #3c7d0f, #2c6d06, #1d5e00);
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  place-items: center;
 }
 
-.link:nth-child(2n + 1) .path {
-  justify-content: left;
-  display: flex;
-  justify-content: space-around;
+.link:nth-child(2n+1) .path {
+  direction: ltr;
 }
 
 .link:nth-child(2n) .path {
-  justify-content: right;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
+  direction: rtl;
 }
 
-
+.link .path .map {
+  position: relative;
+}
 
 .link .path .map iframe {
-  width: 40vw;
-  height: 40vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38vw;
+  height: 38vw;
   border-radius: 50%;
+}
+
+.link .path span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  color: antiquewhite;
 }
