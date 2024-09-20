@@ -291,6 +291,10 @@ RWD version
   place-items: center;
 }
 
+.link .path:hover {
+  background-image: linear-gradient(to top, #7cb755, #68ac43, #53a131, #3a961d, #188b00);
+}
+
 .link:nth-child(2n+1) .path {
   direction: ltr;
 }
