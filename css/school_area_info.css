@@ -114,9 +114,9 @@ h2 {
   height: auto;
 }
 
-.answer p {
-  /* margin-left: 80px; */
-}
+/* .answer p {
+  margin-left: 80px;
+} */
 
 .rent_title {
   font-size: 19px;
@@ -236,6 +236,34 @@ RWD version
   }
 }
 
+.inner-ref {
+  position: relative;
+}
+
+.ref-tag {
+  position: absolute;
+  top: -5.5rem;
+  left: 0;
+}
+
+.section-info {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.section-info span {
+  font-weight: bold;
+}
+
+.section-info a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.section-info a:hover {
+  color: rgb(69, 127, 202)
+}
+
 .section-content {
   width: 95%;
   margin: 10vw auto;
@@ -284,6 +312,7 @@ RWD version
   height: 38vw;
   border-radius: 50%;
   border: 2px solid #866942;
+  pointer-events: none;
 }
 
 .link .path span {
