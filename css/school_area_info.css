@@ -287,7 +287,7 @@ RWD version
   /* background-color: #197526; */
   background-image: linear-gradient(to bottom, #5b9d1e, #4b8d17, #3c7d0f, #2c6d06, #1d5e00);
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 4fr 3fr;
   place-items: center;
 }
 
@@ -322,7 +322,7 @@ RWD version
   color: antiquewhite;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   .link .path span {
     font-size: .9rem;
   }
