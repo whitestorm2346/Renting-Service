@@ -113,10 +113,12 @@ header {
 
 .renting-title {
   display: none;
+  font-family: 標楷體;
 }
 
 .tku-subtitle {
   display: none;
+  font-family: 'Times New Roman', 標楷體, serif;
 }
 
 .main-navbar-1 {
@@ -318,14 +320,24 @@ header {
 
   .renting-title {
     display: block;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: bolder;
+    color: rgb(31, 35, 88);
+    text-shadow: 1px 1px 0px var(--clr-primary-light), /* 右下 */
+               -1px 1px 0px var(--clr-primary-light), /* 左下 */
+               1px -1px 0px var(--clr-primary-light), /* 右上 */
+               -1px -1px 0px var(--clr-primary-light); /* 左上 */
   }
   
   .tku-subtitle {
     display: contents;
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: rgb(31, 35, 88);
+    text-shadow: 1px 1px 0px var(--clr-primary-light), /* 右下 */
+               -1px 1px 0px var(--clr-primary-light), /* 左下 */
+               1px -1px 0px var(--clr-primary-light), /* 右上 */
+               -1px -1px 0px var(--clr-primary-light); /* 左上 */
   }
   
   .main-navbar-1 {
@@ -467,11 +479,11 @@ header {
   }
 
   .renting-title {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
   }
 
   .tku-subtitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .show-menu {

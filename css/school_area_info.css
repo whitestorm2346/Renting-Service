@@ -317,6 +317,7 @@ RWD version
   border-radius: 50%;
   border: 2px solid #866942;
   pointer-events: none;
+  background-color: #a7875f;
 }
 
 .link .path span {
