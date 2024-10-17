@@ -332,3 +332,12 @@ RWD version
     font-size: .9rem;
   }
 }
+
+#school-view {
+  width: 90%;
+  height: 20rem;
+  border-radius: 20px;
+  border-color: #000;
+  border-width: 1px;
+  /* pointer-events: none; */
+}
