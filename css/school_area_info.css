@@ -341,3 +341,14 @@ RWD version
   border-width: 1px;
   /* pointer-events: none; */
 }
+
+.view-map {
+  width: 95%;
+  height: auto;
+}
+
+.school-view map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
