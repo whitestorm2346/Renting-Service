@@ -14,7 +14,7 @@ polygons.forEach(polygon => {
     })
 })
 
-getAreaDescription = (name) => {
+const getAreaDescription = (name) => {
     des = ""
 
     if(name == "英專路"){

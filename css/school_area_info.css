@@ -377,7 +377,7 @@ RWD version
 }
 
 .map-svg polygon:hover {
-  stroke: #999999;
+  stroke: #dadada;
   stroke-width: 1;
   fill: #ffb834;
   opacity: 0.9;
