@@ -363,14 +363,20 @@ header {
     width: 80vw;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
     border-bottom: 1px solid #000;
     font-size: 1.75rem;
+  }
+
+  .main-navbar-1 li a { /* .bar a */
+    width: 80%;
+    cursor: pointer;
   }
 
   .main-navbar-1 li i {
     display: grid;
     place-items: center;
+    cursor: pointer;
+    padding: 1rem;
   }
 
   .show-menu {
