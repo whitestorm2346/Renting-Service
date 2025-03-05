@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TKU校外賃居服務網</title>
+    <link href="../css/rental_info.css" rel="stylesheet" />
+    <link href="../css/rightSideDiv.css" rel="stylesheet" />
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_school_area_info");
+
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
+
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+    </script>
+  </head>
+
+  <body>
+    <section class="inner-ref">
+      <div class="ref-tag" id="rent-area"></div>
+
+      <div class="main-title">
+        <img src="../img/house-solid.png" />
+        <h1>周邊賃居區</h1>
+      </div>
+
+      <div class="section-content">
+        <div id="area-title" class="area-title">請選取下方任意區塊</div>
+
+        <div class="school-view">
+          <img class="view-map" src="../img/school_view.png" />
+
+          <svg
+            class="map-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1227 850"
+          >
+            <!-- 定義濾鏡 -->
+            <defs>
+              <filter
+                id="blur-border"
+                x="-50%"
+                y="-50%"
+                width="200%"
+                height="200%"
+              >
+                <feGaussianBlur
+                  in="SourceAlpha"
+                  stdDeviation="5"
+                  result="blur"
+                />
+                <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+                <feMerge>
+                  <feMergeNode in="offsetBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- 應用濾鏡到每個區塊 -->
+            <polygon
+              data-name="英專路"
+              points="278,626 316,502 443,530 385,699"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="水源街一段"
+              points="212,501 218,450 369,458 459,437 542,447 512,536 315,498"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="學府路(山下)"
+              points="548,442 718,448 596,611 505,642 455,730 416,713 470,549 505,558"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="水源街二段(圖側)"
+              points="503,412 579,433 871,338 844,287 787,314"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="水源街二段(後山)"
+              points="901,327 994,305 1117,305 1118,277 1003,243 869,269"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="水源街二段(黃帝神宮)"
+              points="702,213 684,273 751,285 783,308 818,292 778,237"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="北新路"
+              points="629,136 694,183 667,269 470,256 414,217 390,159 474,162 589,94"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="大忠街"
+              points="308,248 393,188 408,227 462,262 372,307 241,313 208,289 230,257 254,283"
+              filter="url(#blur-border)"
+            />
+            <polygon
+              data-name="學府路(大田寮)"
+              points="281,315 370,314 466,270 365,449 241,441"
+              filter="url(#blur-border)"
+            />
+          </svg>
+        </div>
+
+        <div id="area-description" class="area-description"></div>
+      </div>
+    </section>
+
+    <section class="ppt">
+      <img src="../img/rental_info_ppt1.png" />
+      <img src="../img/rental_info_ppt2.png" />
+      <img src="../img/rental_info_ppt3.png" />
+    </section>
+
+    <section class="linking">
+      <div class="ref-tag" id="rent-area"></div>
+
+      <div class="main-title">
+        <img src="../img/house-solid.png" />
+        <h1>租屋相關連結</h1>
+      </div>
+
+      <div class="section-content">
+        <ul>
+          <li>
+            <a
+              href="https://rent.591.com.tw/list?school=755&region=3"
+              target="_blank"
+              >591租屋</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.rakuya.com.tw/rent/rent_search?search=school&city=2&zipcode=251&schoolLevel=4&school=10507&upd=1"
+              target="_blank"
+              >樂屋網</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://rent.housefun.com.tw/school/%E6%96%B0%E5%8C%97%E5%B8%82/%E6%B7%A1%E6%B0%B4%E5%8D%80/?schtypeid=5&schtype=%E5%A4%A7%E5%B0%88%E9%99%A2%E6%A0%A1&schid=127401&sch=%E6%B7%A1%E6%B1%9F%E5%A4%A7%E5%AD%B8&cid=0001&aid=39"
+              target="_blank"
+              >好房網</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.facebook.com/groups/tkutalk/?locale=zh_TW"
+              target="_blank"
+              >淡江透可租屋中心(FB)</a
+            >
+          </li>
+
+          <li>
+            <a href="https://rent.yungching.com.tw/List.aspx" target="_blank"
+              >永慶房仲網</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.sinyi.com.tw/rent/list/NewTaipei-city/251-zip/index.html"
+              target="_blank"
+              >信義房屋</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="../js/area_view.js"></script>
+  </body>
+</html>

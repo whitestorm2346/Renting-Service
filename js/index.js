@@ -71,6 +71,7 @@ function changeFrameURL(option) {
         case 22: frame.src = 'school_area_info_eng.html'; break; // uncreate
         case 23: frame.src = 'rental_safety.html'; break;
         case 24: frame.src = 'rental_safety_eng.html'; break; // uncreate
+        case 25: frame.src = 'rental_info.html'; break;
         default: frame.src = 'index_main.html'; break;
     }
 }

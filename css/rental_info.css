@@ -1,0 +1,422 @@
+.main-title h1 {
+    cursor: pointer;
+  }
+  
+  body {
+    font-family: "Microsoft JhengHei";
+    background: transparent;
+  }
+  
+  .main-title {
+    margin-left: 5px;
+  }
+  
+  .main-title img,
+  h2 {
+    float: left;
+  }
+  
+  .main-title h1 {
+    padding-top: 40px;
+    margin-right: 350px;
+    border-bottom: 4px #eb0000 solid;
+    cursor: pointer;
+  }
+  
+  #mainTitleDiv {
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 10px;
+  }
+  
+  #main-subMenuDiv {
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  
+  .nav-b {
+    position: relative;
+  }
+  
+  .nav-b,
+  .nav-b ul {
+    list-style: none;
+    margin: 0px;
+    margin: 0px;
+  }
+  
+  .nav-b li {
+    float: left;
+  }
+  
+  .nav-b li a {
+    cursor: pointer;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    background-color: rgb(251, 247, 246);
+    border: 1px solid #ebebeb;
+    color: #ff4166;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 2px;
+  }
+  
+  .nav-b li:hover > a {
+    background: rgb(255, 255, 255);
+    border-color: #ebebeb;
+    color: #ff4166;
+  }
+  
+  .mainContent {
+    padding: 0px 15px;
+  }
+  
+  .mainContent p {
+    padding-top: 40px;
+    font-size: 19px;
+    text-indent: 2em;
+  }
+  
+  .main_question {
+    margin-left: 40px;
+  }
+  
+  #frame_school_area_info {
+    width: 100%;
+    padding-top: 20px;
+    min-height: 500px;
+  }
+  
+  .mainContent {
+    padding-top: 5px;
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .mainContent p {
+    margin-left: 1em;
+  }
+  
+  .question h3 {
+    padding-top: 15px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .answer {
+    height: auto;
+  }
+  
+  /* .answer p {
+    margin-left: 80px;
+  } */
+  
+  .rent_title {
+    font-size: 19px;
+    /* margin-left: -3em; */
+  }
+  
+  .answer_2 {
+    margin-left: 20px;
+    text-indent: 2em;
+  }
+  
+  .answer_1 {
+    margin-left: 20px;
+  }
+  
+  .answer_2 ol {
+    padding-right: 30px;
+    text-indent: 0px;
+  }
+  
+  /* .dataSource {
+      float: right;
+  } */
+  
+  /*
+  =============================
+  RWD version
+  =============================
+  */
+  
+  .nav-btn {
+    list-style: none;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+  }
+  
+  .main-navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  
+  .nav-btn a {
+    color: #ff4166;
+    cursor: pointer;
+  }
+  
+  .nav-btn:hover {
+    background-color: #ff4166;
+  }
+  
+  .nav-btn:hover a {
+    color: #fff;
+  }
+  
+  .dataSource {
+    text-align: center;
+  }
+  
+  .question h3 {
+    width: 90%;
+  }
+  
+  .main-title h2 {
+    float: none;
+  }
+  
+  .main-title p {
+    display: block;
+    width: 85%;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  
+  .reference {
+    text-decoration: underline;
+  }
+  
+  .answer_2 ul {
+    text-indent: 0;
+    width: 80%;
+  }
+  
+  .answer_2 ul li {
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* .main {
+      width: 95vw;
+    } */
+  
+    .main-content {
+      margin: 0 auto;
+    }
+  
+    .main_question {
+      margin-left: 0;
+    }
+  
+    .answer_1 {
+      margin-left: 0;
+      width: fit-content;
+    }
+  
+    .answer_2 {
+      margin-left: 0;
+      width: fit-content;
+    }
+  }
+  
+  .inner-ref {
+    position: relative;
+  }
+  
+  .ref-tag {
+    position: absolute;
+    top: -5.5rem;
+    left: 0;
+  }
+  
+  .section-info {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .section-info span {
+    font-weight: bold;
+  }
+  
+  .section-info a {
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .section-info a:hover {
+    color: rgb(69, 127, 202)
+  }
+  
+  .section-content {
+    width: 95%;
+    margin: 10vw auto;
+  }
+  
+  .links {
+    display: grid;
+    row-gap: 30vw;
+    width: 95%;
+    padding: 6rem 0;
+    list-style-type: none;
+  }
+  
+  .link {
+    height: fit-content;
+  }
+  
+  .link .path {
+    border-radius: 50rem;
+    z-index: -2;
+    /* background-color: #197526; */
+    background-image: linear-gradient(to bottom, #5b9d1e, #4b8d17, #3c7d0f, #2c6d06, #1d5e00);
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    place-items: center;
+  }
+  
+  .link .path:hover {
+    background-image: linear-gradient(to top, #7cb755, #68ac43, #53a131, #3a961d, #188b00);
+  }
+  
+  .link:nth-child(2n+1) .path {
+    direction: ltr;
+  }
+  
+  .link:nth-child(2n) .path {
+    direction: rtl;
+  }
+  
+  .link .path .map {
+    position: relative;
+  }
+  
+  .link .path .map iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38vw;
+    height: 38vw;
+    border-radius: 50%;
+    border: 2px solid #866942;
+    pointer-events: none;
+    background-color: #a7875f;
+  }
+  
+  .link .path span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    color: antiquewhite;
+  }
+  
+  @media screen and (max-width: 670px) {
+    .link .path span {
+      font-size: .9rem;
+    }
+  }
+  
+  #school-view {
+    width: 90%;
+    height: 20rem;
+    border-radius: 20px;
+    border-color: #000;
+    border-width: 1px;
+    /* pointer-events: none; */
+  }
+  
+  .area-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  
+  .school-view {
+    position: relative;
+    width: 95%;
+    height: fit-content;
+  }
+  
+  .view-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  
+  .map-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  
+  .map-svg polygon {
+    fill: #dab586;
+    opacity: 0.4;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .map-svg polygon:hover {
+    stroke: #dadada;
+    stroke-width: 1;
+    fill: #ffb834;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  .area-description {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 3.5rem;
+    font-size: 1.2rem;
+  }
+
+.ppt img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.linking ul {
+    width: 95%;
+    padding: 0;
+}
+ 
+.linking ul li {
+    list-style-type: none;
+    background-color: #295708;
+    padding: .75rem 1rem;
+    border-radius: 5rem;
+    margin: .5rem 0;
+}
+
+.linking ul li a {
+    display: block;
+    width: 95%;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.linking ul li:hover{
+    background-color: #3c7d0f;
+    cursor: pointer;
+}
