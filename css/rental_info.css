@@ -352,6 +352,7 @@
   .school-view {
     position: relative;
     width: 95%;
+    margin: 0 auto;
     height: fit-content;
   }
   
@@ -391,10 +392,19 @@
     font-size: 1.2rem;
   }
 
-.ppt img{
-    width: 100%;
-    margin-bottom: 16px;
+.slick-center {
+  max-width: 88%;
+  margin: 0 auto;
 }
+
+.slick-center img {
+  width: 100%;
+}
+
+.ppt {
+  margin-bottom: 5rem;
+}
+
 
 .linking ul {
     width: 95%;

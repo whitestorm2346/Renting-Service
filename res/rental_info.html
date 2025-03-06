@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TKU校外賃居服務網</title>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slick-theme.css" />
     <link href="../css/rental_info.css" rel="stylesheet" />
     <link href="../css/rightSideDiv.css" rel="stylesheet" />
-    <script src="../js/jquery-1.12.4.min.js"></script>
     <script>
       function reinitIframe() {
         var iframe = document.getElementById("frame_school_area_info");
@@ -27,7 +28,7 @@
 
       <div class="main-title">
         <img src="../img/house-solid.png" />
-        <h1>周邊賃居區</h1>
+        <h1>周邊賃居區介紹</h1>
       </div>
 
       <div class="section-content">
@@ -117,9 +118,11 @@
     </section>
 
     <section class="ppt">
-      <img src="../img/rental_info_ppt1.png" />
-      <img src="../img/rental_info_ppt2.png" />
-      <img src="../img/rental_info_ppt3.png" />
+      <div class="slick-center">
+        <div><img src="../img/rental_info_ppt1.png" /></div>
+        <div><img src="../img/rental_info_ppt2.png" /></div>
+        <div><img src="../img/rental_info_ppt3.png" /></div>
+      </div>
     </section>
 
     <section class="linking">
@@ -139,7 +142,6 @@
               >591租屋</a
             >
           </li>
-
           <li>
             <a
               href="https://www.rakuya.com.tw/rent/rent_search?search=school&city=2&zipcode=251&schoolLevel=4&school=10507&upd=1"
@@ -147,7 +149,6 @@
               >樂屋網</a
             >
           </li>
-
           <li>
             <a
               href="https://rent.housefun.com.tw/school/%E6%96%B0%E5%8C%97%E5%B8%82/%E6%B7%A1%E6%B0%B4%E5%8D%80/?schtypeid=5&schtype=%E5%A4%A7%E5%B0%88%E9%99%A2%E6%A0%A1&schid=127401&sch=%E6%B7%A1%E6%B1%9F%E5%A4%A7%E5%AD%B8&cid=0001&aid=39"
@@ -155,7 +156,6 @@
               >好房網</a
             >
           </li>
-
           <li>
             <a
               href="https://www.facebook.com/groups/tkutalk/?locale=zh_TW"
@@ -163,13 +163,13 @@
               >淡江透可租屋中心(FB)</a
             >
           </li>
-
           <li>
-            <a href="https://rent.yungching.com.tw/List.aspx" target="_blank"
+            <a
+              href="https://rent.yungching.com.tw/region/%E6%96%B0%E5%8C%97%E5%B8%82_city/%E6%B7%A1%E6%B0%B4%E5%8D%80_zip"
+              target="_blank"
               >永慶房仲網</a
             >
           </li>
-
           <li>
             <a
               href="https://www.sinyi.com.tw/rent/list/NewTaipei-city/251-zip/index.html"
@@ -180,6 +180,28 @@
         </ul>
       </div>
     </section>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".slick-center").slick({
+          slidesToShow: 1, // 顯示 3 個圖片 (可依需求調整)
+          autoplay: true, // 自動播放
+          autoplaySpeed: 2000, // 自動播放間隔時間 (2 秒)
+          arrows: true, // 顯示左右箭頭
+          dots: true, // 顯示下方的點點
+        });
+      });
+    </script>
 
     <script src="../js/area_view.js"></script>
   </body>
