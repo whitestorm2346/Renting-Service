@@ -401,6 +401,8 @@
   width: 100%;
 }
 
+
+
 .ppt {
   margin-bottom: 5rem;
 }
@@ -411,9 +413,10 @@
     padding: 0;
 }
  
-.linking ul li {
+ .linking ul li {
     list-style-type: none;
-    background-color: #295708;
+    border: 2px solid #33660f;
+    background-color: #33660f;
     padding: .75rem 1rem;
     border-radius: 5rem;
     margin: .5rem 0;
@@ -429,4 +432,4 @@
 .linking ul li:hover{
     background-color: #3c7d0f;
     cursor: pointer;
-}
+} 
