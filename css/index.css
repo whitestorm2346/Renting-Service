@@ -619,6 +619,56 @@ Header End
 ========================================
 */
 
+
+/*
+========================================
+Search Results Pop Up Start
+========================================
+*/
+
+.search-results-popup {
+  display: none;
+}
+
+.search-results-no-result {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 5vw;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  text-align: center;
+}
+
+.search-results-no-result .title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.search-results-no-result .title span {
+  color: rgb(187, 22, 22);
+}
+
+.search-results-no-result .content {
+  font-size: 1.5rem;
+}
+
+.search-results-show-results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+========================================
+Search Results Pop Up End
+========================================
+*/
+
 /*
 ========================================
 Main Section Start

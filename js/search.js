@@ -41,9 +41,10 @@ const pages = [
     'rental_info.html',
 ];
 
-const search_btn = document.getElementById("searchBtn").addEventListener("click", function () {
-    const search_input = document.getElementById("searchInput");
-    
+const search_input = document.getElementById("searchInput");
+const search_btn = document.getElementById("searchBtn");
+
+search_btn.addEventListener("click", function () {
     if(search_input.value === "") {
         console.error("Empty string in search input bar");
     }
@@ -51,6 +52,21 @@ const search_btn = document.getElementById("searchBtn").addEventListener("click"
         // console.log(search_input.value);
         searchContent(search_input.value);
         search_input.value = "";
+    }
+});
+
+search_input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") { // 檢查是否按下 Enter 鍵
+        event.preventDefault();  // 防止預設行為（如表單提交）
+
+        if(search_input.value === "") {
+            console.error("Empty string in search input bar");
+        }
+        else {
+            // console.log(search_input.value);
+            searchContent(search_input.value);
+            search_input.value = "";
+        }
     }
 });
 
@@ -71,7 +87,11 @@ async function searchContent(keyword) {
         }
     }
 
-    if(results == []){ // 要處理 async 的問題
+    const search_popup = document.getElementById("search-results-popup");
+
+    if(results.length === 0){ 
         console.log("查無相關訊息");
+
+        search_popup.classList.add("search-results-no-result");
     }
 }
