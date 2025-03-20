@@ -138,15 +138,15 @@ Bulletin Board Section
 .card-container {
   width: 100%;
   height: fit-content;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  row-gap: 1.5rem;
+  row-gap: 1.5rem; */
 }
 
 .card-container a {
   display: block;
-  width: 21rem;
-  height: 12rem;
+  width: 28rem;
+  height: 16rem;
   margin: 0 auto;
 }
 
@@ -206,4 +206,31 @@ Bulletin Board Section
 .card:hover::after {
   transform: scale(0.8);
   opacity: 1;
+}
+
+/*
+============================
+Card Marquee Section
+============================
+*/
+
+.card-marquee {
+  padding-bottom: 2rem;
+}
+
+.card-marquee-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  border-bottom: 5px solid rgb(109, 69, 53);
+  color: rgb(109, 69, 53);
+  margin: 0 auto;
+  padding: 0 5px;
+  margin-bottom: 1.5rem;
+}
+
+.slick-center {
+  max-width: 80%;
+  margin: 0 auto;
 }
