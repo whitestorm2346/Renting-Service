@@ -631,6 +631,8 @@ Search Results Pop Up Start
 }
 
 .search-results-no-result {
+  width: 80%;
+  max-width: 400px;
   z-index: 5;
   position: fixed;
   top: 50%;
@@ -638,8 +640,8 @@ Search Results Pop Up Start
   transform: translate(-50%, -50%);
   padding: 2rem 5vw;
   border-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  background-color: hwb(52 91% 0%);
   text-align: center;
 }
 
@@ -657,10 +659,66 @@ Search Results Pop Up Start
 }
 
 .search-results-show-results {
+  width: 80%;
+  max-width: 400px;
+  z-index: 5;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 2rem 5vw;
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  background-color: hwb(52 91% 0%);
+  text-align: center;
+}
+
+.search-results-show-results .title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.search-results-show-results .title span {
+  color: rgb(235, 92, 9);
+}
+
+.search-results-show-results .content {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+.content .links {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  line-height: 2.5rem;
+  background-color: #fff;
+}
+
+.content .link a {
+  margin: .7rem;
+  background-color: #ffa24b;
+  border-radius: 10px;
+} 
+
+.content .link a:hover {
+  background-color: #ffc38c;
+}
+
+.close {
+  border: none;
+  padding: .5rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  background-color: #ffaf81;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #e69161;
 }
 
 /*
