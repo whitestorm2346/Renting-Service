@@ -113,6 +113,7 @@ async function searchContent(keyword) {
         search_popup.classList.remove("search-results-popup")
         search_popup.innerHTML = `
             <div class="title">搜尋<span>失敗</span></div>
+            <div class="subtitle">關鍵字：<span>${keyword}</span></div>
             <div class="content">
                 <p>查無與搜尋關鍵字相符之頁面內容</p>
             </div>
@@ -131,25 +132,38 @@ async function searchContent(keyword) {
         innerUl = ""
 
         for(const page of results) {
-            innerUl += `<li class="link"><a href="">${page_tag[page]}</a></li>`
+            innerUl += `<li class="link"><button type="submit" id="${page}">${page_tag[page]}</button></li>`
         }
 
         search_popup.classList.add("search-results-show-results");
         search_popup.classList.remove("search-results-popup")
         search_popup.innerHTML = `
             <div class="title">相關頁面<span>鏈結</span></div>
+            <div class="subtitle">關鍵字：<span>${keyword}</span></div>
             <div class="content">
                 <ul class="links">
                     ${innerUl}
                 </ul>
             </div>
             <button id="popup-close-btn" class="close">關閉</button>
-        `
+        `;
+
+        const frame_content = document.getElementById("frame_content");
+
+        for(const page of results){
+            document.getElementById(page).addEventListener("click", function () {
+                frame_content.src = page;
+
+                search_popup.classList.add("search-results-popup");
+                search_popup.classList.remove("search-results-show-results");
+                search_popup.innerHTML = "";
+            });
+        } 
 
         document.getElementById("popup-close-btn").addEventListener("click", function () {
-            search_popup.classList.add("search-results-popup")
-            search_popup.classList.remove("search-results-show-results")
-            search_popup.innerHTML = ""
+            search_popup.classList.add("search-results-popup");
+            search_popup.classList.remove("search-results-show-results");
+            search_popup.innerHTML = "";
         });
     }
 }

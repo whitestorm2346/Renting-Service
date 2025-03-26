@@ -596,22 +596,32 @@ header {
 @media screen and (max-width: 990px) {
   .search-bar {
     position: absolute;
-    top: 0;
-    right: 6vw;
-    z-index: 2;
+    top: 95%;
+    right: 0;
+    z-index: -2;
     display: flex;
+    height: 45px;
+  }
+
+  .search-btn {
+    height: 45px;
+    width: 45px;
+  }
+
+  .search-btn .icon {
+    font-size: 1.2rem;
   }
 
   .search-input {
-    width: 20vw;
+    width: 30vw;
   }
 }
 
-@media screen and (max-width: 660px) {
+/* @media screen and (max-width: 660px) {
   .search-input {
     display: none;
   }
-}
+} */
 
 /*
 ========================================
@@ -654,6 +664,15 @@ Search Results Pop Up Start
   color: rgb(187, 22, 22);
 }
 
+.search-results-no-result .subtitle {
+  margin: .5rem;
+  font-size: 1.2rem;
+}
+
+.search-results-no-result .subtitle span {
+  font-weight: bold;
+}
+
 .search-results-no-result .content {
   font-size: 1.5rem;
 }
@@ -682,6 +701,15 @@ Search Results Pop Up Start
   color: rgb(235, 92, 9);
 }
 
+.search-results-show-results .subtitle {
+  margin: .5rem;
+  font-size: 1.2rem;
+}
+
+.search-results-show-results .subtitle span {
+  font-weight: bold;
+}
+
 .search-results-show-results .content {
   margin: 2rem;
   font-size: 1.5rem;
@@ -693,17 +721,23 @@ Search Results Pop Up Start
   padding: 1rem;
   border-radius: 10px;
   line-height: 2.5rem;
-  background-color: #fff;
+  /* background-color: #fffbf2; */
 }
 
-.content .link a {
-  margin: .7rem;
+.content .link button {
+  margin: .5rem;
+  padding: .5rem 0;
   background-color: #ffa24b;
   border-radius: 10px;
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
 } 
 
-.content .link a:hover {
+.content .link button:hover {
+  cursor: pointer;
   background-color: #ffc38c;
+  /* font-weight: bold; */
 }
 
 .close {
