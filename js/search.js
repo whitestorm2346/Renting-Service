@@ -60,15 +60,30 @@ const page_tag = {
 
 const search_input = document.getElementById("searchInput");
 const search_btn = document.getElementById("searchBtn");
+const search_input_checkbox = document.getElementById("pop-up-search-input");
 
 search_btn.addEventListener("click", function () {
-    if(search_input.value === "") {
-        console.error("Empty string in search input bar");
+    if(window.innerWidth <= 660) {
+        search_input_checkbox.checked = !search_input_checkbox.checked;
+
+        if(search_input_checkbox.checked) {
+            search_input.classList.remove("search-input");
+            search_input.classList.add("search-input-pop-up");
+        }
+        else {
+            search_input.classList.add("search-input");
+            search_input.classList.remove("search-input-pop-up");
+        }
     }
     else {
-        // console.log(search_input.value);
-        searchContent(search_input.value);
-        search_input.value = "";
+        if(search_input.value === "") {
+            console.error("Empty string in search input bar");
+        }
+        else {
+            // console.log(search_input.value);
+            searchContent(search_input.value);
+            search_input.value = "";
+        }
     }
 });
 
@@ -89,6 +104,10 @@ search_input.addEventListener("keydown", function(event) {
 
 async function searchContent(keyword) {
     let results = [];
+
+    search_input_checkbox.checked = false;
+    search_input.classList.add("search-input");
+    search_input.classList.remove("search-input-pop-up");
 
     for (const page of pages) {
         try {
