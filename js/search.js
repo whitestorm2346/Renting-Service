@@ -62,6 +62,14 @@ const search_input = document.getElementById("searchInput");
 const search_btn = document.getElementById("searchBtn");
 const search_input_checkbox = document.getElementById("pop-up-search-input");
 
+window.addEventListener("resize", function () {
+    if(this.window.innerWidth > 600){
+        search_input_checkbox.checked = false;
+        search_input.classList.add("search-input");
+        search_input.classList.remove("search-input-pop-up");
+    }
+})
+
 search_btn.addEventListener("click", function () {
     if(window.innerWidth <= 660) {
         search_input_checkbox.checked = !search_input_checkbox.checked;
