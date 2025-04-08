@@ -1,7 +1,8 @@
 const menubtn1 = document.querySelector("#toggler1");
 const menu1 = document.querySelector("#menu-1");
+const hamburger_btn = document.getElementById("hamburger-btn");
 
-menubtn1.addEventListener("click", function () {
+hamburger_btn.addEventListener("click", function () {
     if(menubtn1.checked) {
         menu1.classList.add("show-menu");
         menu1.classList.remove("hide-menu");
