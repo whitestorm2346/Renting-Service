@@ -588,7 +588,7 @@ header {
 
 .search-input-pop-up {
   position: absolute;
-  bottom: -50%;
+  bottom: -200%;
   right: 10%;
   width: 50vw;
   border-radius: 5rem;
