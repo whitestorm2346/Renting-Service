@@ -103,6 +103,15 @@ search_input.addEventListener("keydown", function(event) {
 });
 
 async function searchContent(keyword) {
+    const search_popup = document.getElementById("searchPopup");
+
+    search_popup.classList.add("search-loading");
+    search_popup.classList.remove("search-results-popup");
+    search_popup.innerHTML = `
+        <div class="loading-spinner"></div>
+        <div class="title">Loading...</div>
+    `
+    
     let results = [];
 
     search_input_checkbox.checked = false;
@@ -123,13 +132,14 @@ async function searchContent(keyword) {
         }
     }
 
-    const search_popup = document.getElementById("searchPopup");
+    search_popup.classList.add("search-results-popup");
+    search_popup.classList.remove("search-loading");
 
     if(results.length === 0){ 
         console.log("查無相關訊息");
 
         search_popup.classList.add("search-results-no-result");
-        search_popup.classList.remove("search-results-popup")
+        search_popup.classList.remove("search-results-popup");
         search_popup.innerHTML = `
             <div class="title">搜尋<span>失敗</span></div>
             <div class="subtitle">關鍵字：<span>${keyword}</span></div>
@@ -140,9 +150,9 @@ async function searchContent(keyword) {
         `
 
         document.getElementById("popup-close-btn").addEventListener("click", function () {
-            search_popup.classList.add("search-results-popup")
-            search_popup.classList.remove("search-results-no-result")
-            search_popup.innerHTML = ""
+            search_popup.classList.add("search-results-popup");
+            search_popup.classList.remove("search-results-no-result");
+            search_popup.innerHTML = "";
         });
     }
     else {

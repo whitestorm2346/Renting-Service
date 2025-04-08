@@ -500,19 +500,7 @@ header {
   }
 
   .hamburger-container {
-    display: block;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .hamburger-container span {
-    display: block;
-    height: 4px;
-    border-radius: 5rem;
-    background-color: var(--clr-secondary-light);
-    position: relative;
-    transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
-    top: 0;
+    margin-top: 16px;
   }
   
   .hamburger-container span:nth-child(2) {
@@ -620,6 +608,7 @@ header {
   }
 
   .search-btn {
+    margin-right: 1rem;
     height: 45px;
     width: 45px;
   }
@@ -654,6 +643,42 @@ Search Results Pop Up Start
 
 .search-results-popup {
   display: none;
+}
+
+.search-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 150px;
+  background-color: hwb(0 49% 51%);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3;           /* 淺色背景圓 */
+  border-top: 6px solid #3498db;        /* 深色頂部線條 */
+  border-radius: 50%;                   /* 變成圓形 */
+  animation: spin 1s linear infinite;   /* 動畫設定 */
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.search-loading .title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .search-results-no-result {
