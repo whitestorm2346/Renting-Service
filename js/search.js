@@ -118,7 +118,7 @@ async function searchContent(keyword) {
     search_popup.innerHTML = `
         <div class="loading-spinner"></div>
         <div class="title">Loading...</div>
-    `
+    `;
     
     let results = [];
 
@@ -155,7 +155,7 @@ async function searchContent(keyword) {
                 <p>查無與搜尋關鍵字相符之頁面內容</p>
             </div>
             <button id="popup-close-btn" class="close">關閉</button>
-        `
+        `;
 
         document.getElementById("popup-close-btn").addEventListener("click", function () {
             search_popup.classList.add("search-results-popup");

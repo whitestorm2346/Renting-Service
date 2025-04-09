@@ -482,3 +482,17 @@
   background-color: rgb(0, 79, 7);
   
 }
+
+.section-content p{
+  
+  color: red;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.section-content a{
+  display: inline;
+  color: red;
+  font-weight: bold;
+  font-size: 3rem;
+}
