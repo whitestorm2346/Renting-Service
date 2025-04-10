@@ -483,16 +483,38 @@
   
 }
 
-.section-content p{
+.section-content span{
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+  font-size: 3rem;
+  animation: scroll-left 12s linear infinite;
+  padding-left: 25%;
+  margin: 0;    
+  
+}
+
+.section-content span a{
   
   color: red;
   font-weight: bold;
   font-size: 3rem;
+  
+  text-decoration: underline; 
+  
 }
 
-.section-content a{
-  display: inline;
-  color: red;
-  font-weight: bold;
-  font-size: 3rem;
+
+
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
