@@ -8,18 +8,6 @@
     <link href="../css/rightSideDiv.css" rel="stylesheet" />
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/rental_safety.js"></script>
-    <script>
-      function reinitIframe() {
-        var iframe = document.getElementById("frame_school_area_info");
-
-        try {
-          iframe.height =
-            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
-        } catch (ex) {}
-      }
-
-      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
-    </script>
   </head>
 
   <body>
@@ -47,9 +35,31 @@
       </div>
 
       <div class="main-content">
-        <iframe id="frame_rental_safety" scrolling="No" src="" frameborder="0">
+        <iframe
+          id="frame_rental_safety"
+          name="frame_rental_safety"
+          src=""
+          frameborder="0"
+          scrolling="no"
+        >
         </iframe>
       </div>
     </div>
+
+    <script>
+      window.addEventListener("message", (event) => {
+        if (event.data.from === "iframeB") {
+          // console.log("event: iframeB");
+          const iframe = document.getElementById("frame_rental_safety");
+          iframe.style.height = event.data.height + "px";
+          // console.log(`height: ${event.data.height}`);
+          // iframeA 將 iframeB 的高度轉發給 index.html
+          window.parent.postMessage(
+            { from: "iframeA", height: event.data.height },
+            "*"
+          );
+        }
+      });
+    </script>
   </body>
 </html>

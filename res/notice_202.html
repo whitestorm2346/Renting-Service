@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TKU校外賃居服務網</title>
-    <link href="../css/rightSideDiv.css" rel="stylesheet">
-    <link href="../css/notice.css" rel="stylesheet">
+    <link href="../css/rightSideDiv.css" rel="stylesheet" />
+    <link href="../css/notice.css" rel="stylesheet" />
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/notice.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="main-title">
-            <img src="../img/warning.png">
-            <h1><a href="notice_index.html">退租還屋注意事項</a></h1>
-        </div>
+      <div class="main-title">
+        <img src="../img/warning.png" />
+        <h1><a href="notice_index.html">退租還屋注意事項</a></h1>
+      </div>
 
-        <div class="main-content">
-            <ol>
-                <li>搬遷完畢,請前往檢查屋內設備(包含傢具.電器等)是否完好無缺?或減少?<br>
-                </li>
-                <li>
-                    馬桶.水管是否暢通?<br>
-                    ➥使用影片紀錄存證
-                </li>
-                <li>
-                    遺留物品及垃圾是否清理乾淨?<br>
-                    ➥如有遺留物除非事先與房東溝通,否則一般會被視為垃圾處理
-                </li>
-                <li>
-                    是否積欠管理費?(結清費用於押金中扣除)<br>
-                    ➥ 交管理費應取得收據留存
-                </li>
-                <li>
-                    交屋當天須交還鑰匙<br>
-                    ➥ 如房東避不見面或藉故拖延可以雙掛號加存證信寄出
-                </li>
-            </ol>
-        </div>
+      <div class="main-content">
+        <ol>
+          <li>
+            搬遷完畢,請前往檢查屋內設備(包含傢具.電器等)是否完好無缺?或減少?<br />
+          </li>
+          <li>
+            馬桶.水管是否暢通?<br />
+            ➥使用影片紀錄存證
+          </li>
+          <li>
+            遺留物品及垃圾是否清理乾淨?<br />
+            ➥如有遺留物除非事先與房東溝通,否則一般會被視為垃圾處理
+          </li>
+          <li>
+            是否積欠管理費?(結清費用於押金中扣除)<br />
+            ➥ 交管理費應取得收據留存
+          </li>
+          <li>
+            交屋當天須交還鑰匙<br />
+            ➥ 如房東避不見面或藉故拖延可以雙掛號加存證信寄出
+          </li>
+        </ol>
+      </div>
     </div>
-</body>
 
+    <script>
+      let lastHeight = 0;
+
+      function checkAndPostHeight() {
+        const currentHeight = document.documentElement.scrollHeight;
+        if (currentHeight !== lastHeight) {
+          lastHeight = currentHeight;
+          // console.log("高度變了:", currentHeight);
+          window.parent.postMessage(
+            { from: "iframeB", height: currentHeight },
+            "*"
+          );
+        }
+      }
+
+      // 初始載入時執行一次
+      window.addEventListener("load", () => {
+        checkAndPostHeight();
+      });
+
+      // 定時檢查高度變化
+      setInterval(checkAndPostHeight, 300);
+    </script>
+  </body>
 </html>

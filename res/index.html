@@ -33,6 +33,10 @@
           var iframe = document.getElementById("frame_content");
           iframe.height =
             iframe.contentWindow.document.documentElement.scrollHeight;
+        } else if (event.data === "iframeA") {
+          const iframe = document.getElementById("frame_content");
+          iframe.style.height = event.data.height + 50 + "px";
+          console.log(iframe.style.height);
         }
       }
 

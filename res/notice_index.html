@@ -6,7 +6,6 @@
     <link href="../css/rightSideDiv.css" rel="stylesheet" />
     <link href="../css/notice.css" rel="stylesheet" />
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/question.js"></script>
     <title>TKU校外賃居服務網</title>
   </head>
 
@@ -26,5 +25,29 @@
         </ol>
       </div>
     </div>
+
+    <script>
+      let lastHeight = 0;
+
+      function checkAndPostHeight() {
+        const currentHeight = document.documentElement.scrollHeight;
+        if (currentHeight !== lastHeight) {
+          lastHeight = currentHeight;
+          // console.log("高度變了:", currentHeight);
+          window.parent.postMessage(
+            { from: "iframeB", height: currentHeight },
+            "*"
+          );
+        }
+      }
+
+      // 初始載入時執行一次
+      window.addEventListener("load", () => {
+        checkAndPostHeight();
+      });
+
+      // 定時檢查高度變化
+      setInterval(checkAndPostHeight, 300);
+    </script>
   </body>
 </html>

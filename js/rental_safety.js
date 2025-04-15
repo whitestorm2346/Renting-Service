@@ -1,14 +1,15 @@
 /**
  * Created by tsehsun on 2024/05/14.
  */
-var optionCount = 0;
-$(function () {
-    var url = window.location;
-    var urlAux = url.toString().split("=");
-    var option = urlAux[1];
-    optionCount = option;
-    changeFrameURL(optionCount);
-});
+let optionCount = 0;
+
+// $(function () {
+//     var url = window.location;
+//     var urlAux = url.toString().split("=");
+//     var option = urlAux[1];
+//     optionCount = option;
+//     changeFrameURL(optionCount);
+// });
 
 function changeFrameURL(option) {
     if (option == null) {
@@ -30,10 +31,18 @@ function changeFrameURL(option) {
             break;
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    var url = window.location;
+    var urlAux = url.toString().split("=");
+    var option = urlAux[1];
+    optionCount = (option == null) ? -1 : option;
+    changeFrameURL(optionCount);
+});
+
 function changeOption2(option) {
     document.location.href = "rental_safety.html?option=" + option;
 }
-
 
 function SetCwinHeight() {
     var iframeid = document.getElementById("frame_rental_safety"); //iframe id
