@@ -47,17 +47,25 @@
     </div>
 
     <script>
+      let lastHeight = 0;
+
       window.addEventListener("message", (event) => {
         if (event.data.from === "iframeB") {
-          // console.log("event: iframeB");
           const iframe = document.getElementById("frame_rental_safety");
           iframe.style.height = event.data.height + "px";
-          // console.log(`height: ${event.data.height}`);
-          // iframeA 將 iframeB 的高度轉發給 index.html
-          window.parent.postMessage(
-            { from: "iframeA", height: event.data.height },
-            "*"
-          );
+
+          let currHeight = document.documentElement.scrollHeight;
+
+          if (currHeight !== lastHeight) {
+            lastHeight = currHeight;
+
+            console.log(`iframeA height: ${currHeight}`);
+
+            window.parent.postMessage(
+              { from: "iframeA", height: currHeight },
+              "*"
+            );
+          }
         }
       });
     </script>

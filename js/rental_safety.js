@@ -3,14 +3,6 @@
  */
 let optionCount = 0;
 
-// $(function () {
-//     var url = window.location;
-//     var urlAux = url.toString().split("=");
-//     var option = urlAux[1];
-//     optionCount = option;
-//     changeFrameURL(optionCount);
-// });
-
 function changeFrameURL(option) {
     if (option == null) {
         document.getElementById("frame_rental_safety").src = 'safe.html';
@@ -43,17 +35,3 @@ window.addEventListener('DOMContentLoaded', () => {
 function changeOption2(option) {
     document.location.href = "rental_safety.html?option=" + option;
 }
-
-function SetCwinHeight() {
-    var iframeid = document.getElementById("frame_rental_safety"); //iframe id
-    if (document.getElementById) {
-        if (iframeid && !window.opera) {
-            if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
-                iframeid.height = iframeid.contentDocument.body.offsetHeight;
-            }
-            else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
-                iframeid.height = iframeid.Document.body.scrollHeight;
-            }
-        }
-    }
-};

@@ -155,7 +155,7 @@
         const currentHeight = document.documentElement.scrollHeight;
         if (currentHeight !== lastHeight) {
           lastHeight = currentHeight;
-          // console.log("高度變了:", currentHeight);
+          console.log("高度變了:", currentHeight);
           window.parent.postMessage(
             { from: "iframeB", height: currentHeight },
             "*"

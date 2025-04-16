@@ -15,33 +15,6 @@
     <!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/index.js"></script>
-    <script>
-      function reinitIframe() {
-        var iframe = document.getElementById("frame_content");
-
-        try {
-          iframe.height =
-            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
-        } catch (ex) {}
-      }
-
-      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
-
-      function handleMessage(event) {
-        if (event.data === "show") {
-          // 顯示內容後的動作
-          var iframe = document.getElementById("frame_content");
-          iframe.height =
-            iframe.contentWindow.document.documentElement.scrollHeight;
-        } else if (event.data === "iframeA") {
-          const iframe = document.getElementById("frame_content");
-          iframe.style.height = event.data.height + 50 + "px";
-          console.log(iframe.style.height);
-        }
-      }
-
-      window.addEventListener("message", handleMessage, false);
-    </script>
   </head>
 
   <body>
@@ -255,5 +228,33 @@
     </footer>
     <script src="../js/menu.js"></script>
     <script src="../js/search.js"></script>
+
+    <script>
+      function reinitIframe() {
+        var iframe = document.getElementById("frame_content");
+
+        try {
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight; //此為載入網頁之高度
+        } catch (ex) {}
+      }
+
+      window.setInterval("reinitIframe()", 200); //設定使其每0.2秒執行一次
+
+      function handleMessage(event) {
+        if (event.data === "show") {
+          console.log("event: show");
+          var iframe = document.getElementById("frame_content");
+          iframe.height =
+            iframe.contentWindow.document.documentElement.scrollHeight;
+        } else if (event.data.from === "iframeA") {
+          const iframe = document.getElementById("frame_content");
+          iframe.style.height = event.data.height + "px";
+          console.log(iframe.style.height);
+        }
+      }
+
+      window.addEventListener("message", handleMessage, false);
+    </script>
   </body>
 </html>
