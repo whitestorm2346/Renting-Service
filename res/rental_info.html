@@ -142,7 +142,8 @@
         </span>
 
         <div class="masked-list-container">
-          <ul>
+          <div class="masked-bg"></div>
+          <ul class="masked-content">
             <li>
               <a
                 href="https://www.rakuya.com.tw/rent/rent_search?search=school&city=2&zipcode=251&schoolLevel=4&school=10507&upd=1"
@@ -194,7 +195,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      
     </section>
 
     <script
@@ -221,45 +222,49 @@
 
     <script>
       if (CSS["paintWorklet"]) {
-        CSS.paintWorklet.addModule(
-          URL.createObjectURL(
-            new Blob(
-              [
-                `
-      class MaskedListPainter {
-        paint(ctx, size, props) {
-          const liHeight = 48; // 近似 .75rem + 字高
-          const gap = 16;      // 約 .5rem margin
-          const radius = 32;   // 圓角
-          const padding = 0;
-          const width = size.width * 0.95;
+  CSS.paintWorklet.addModule(
+    URL.createObjectURL(
+      new Blob(
+        [
+          `
+        class MaskedListPainter {
+          static get inputProperties() { return []; }
 
-          let y = padding;
-          for (let i = 0; i < 7; i++) {
-            ctx.beginPath();
-            ctx.moveTo(padding + radius, y);
-            ctx.lineTo(padding + width - radius, y);
-            ctx.quadraticCurveTo(padding + width, y, padding + width, y + radius);
-            ctx.lineTo(padding + width, y + liHeight - radius);
-            ctx.quadraticCurveTo(padding + width, y + liHeight, padding + width - radius, y + liHeight);
-            ctx.lineTo(padding + radius, y + liHeight);
-            ctx.quadraticCurveTo(padding, y + liHeight, padding, y + liHeight - radius);
-            ctx.lineTo(padding, y + radius);
-            ctx.quadraticCurveTo(padding, y, padding + radius, y);
-            ctx.closePath();
-            ctx.fill();
-            y += liHeight + gap;
+          paint(ctx, size, props) {
+            const liHeight = 48;
+            const gap = 16;
+            const radius = 32;
+            const padding = 20;
+            const width = size.width * 0.95;
+
+            let y = padding;
+            for (let i = 0; i < 7; i++) {
+              ctx.beginPath();
+              ctx.moveTo(padding + radius, y);
+              ctx.lineTo(padding + width - radius, y);
+              ctx.quadraticCurveTo(padding + width, y, padding + width, y + radius);
+              ctx.lineTo(padding + width, y + liHeight - radius);
+              ctx.quadraticCurveTo(padding + width, y + liHeight, padding + width - radius, y + liHeight);
+              ctx.lineTo(padding + radius, y + liHeight);
+              ctx.quadraticCurveTo(padding, y + liHeight, padding, y + liHeight - radius);
+              ctx.lineTo(padding, y + radius);
+              ctx.quadraticCurveTo(padding, y, padding + radius, y);
+              ctx.closePath();
+              ctx.fill();
+              y += liHeight + gap;
+            }
           }
         }
-      }
-      registerPaint('masked-list', MaskedListPainter);
-    `,
-              ],
-              { type: "application/javascript" }
-            )
-          )
-        );
-      }
+
+        registerPaint('masked-list', MaskedListPainter);
+      `,
+        ],
+        { type: "application/javascript" }
+      )
+    )
+  );
+}
+
     </script>
 
     <script src="../js/area_view.js"></script>
