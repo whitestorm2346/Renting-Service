@@ -141,9 +141,47 @@
           >，先付定金優先看房→這是詐騙！
         </span>
 
+        <div class="mask">
+          <svg width="100%" height="500">
+            <rect width="100%" height="500" rx="25" fill="#998CBA"/>
+
+             <mask id="mask-list">
+               <g transform="translate(0, 0)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 1</text>
+               </g>
+               <g transform="translate(0, 60)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 2</text>
+               </g>
+               <g transform="translate(0, 120)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 3</text>
+               </g>
+               <g transform="translate(0, 180)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 4</text>
+               </g>
+               <g transform="translate(0, 240)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 5</text>
+               </g>
+               <g transform="translate(0, 300)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 6</text>
+               </g>
+               <g transform="translate(0, 360)">
+                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
+                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 7</text>
+               </g>
+             </mask>
+
+             <rect width="100%" height="500" rx="25" fill="orange" mask="url(mask-list)"></rect>
+          </svg>
+        </div>
+
         <div class="masked-list-container">
-          <div class="masked-bg"></div>
-          <ul class="masked-content">
+          <ul id="masked-content">
             <li>
               <a
                 href="https://www.rakuya.com.tw/rent/rent_search?search=school&city=2&zipcode=251&schoolLevel=4&school=10507&upd=1"
@@ -158,7 +196,6 @@
                 >好房網</a
               >
             </li>
-
             <li>
               <a
                 href="https://rent.591.com.tw/list?school=755&region=3"
@@ -219,54 +256,6 @@
         });
       });
     </script>
-
-    <script>
-      if (CSS["paintWorklet"]) {
-  CSS.paintWorklet.addModule(
-    URL.createObjectURL(
-      new Blob(
-        [
-          `
-        class MaskedListPainter {
-          static get inputProperties() { return []; }
-
-          paint(ctx, size, props) {
-            const liHeight = 48;
-            const gap = 16;
-            const radius = 32;
-            const padding = 20;
-            const width = size.width * 0.95;
-
-            let y = padding;
-            for (let i = 0; i < 7; i++) {
-              ctx.beginPath();
-              ctx.moveTo(padding + radius, y);
-              ctx.lineTo(padding + width - radius, y);
-              ctx.quadraticCurveTo(padding + width, y, padding + width, y + radius);
-              ctx.lineTo(padding + width, y + liHeight - radius);
-              ctx.quadraticCurveTo(padding + width, y + liHeight, padding + width - radius, y + liHeight);
-              ctx.lineTo(padding + radius, y + liHeight);
-              ctx.quadraticCurveTo(padding, y + liHeight, padding, y + liHeight - radius);
-              ctx.lineTo(padding, y + radius);
-              ctx.quadraticCurveTo(padding, y, padding + radius, y);
-              ctx.closePath();
-              ctx.fill();
-              y += liHeight + gap;
-            }
-          }
-        }
-
-        registerPaint('masked-list', MaskedListPainter);
-      `,
-        ],
-        { type: "application/javascript" }
-      )
-    )
-  );
-}
-
-    </script>
-
     <script src="../js/area_view.js"></script>
   </body>
 </html>

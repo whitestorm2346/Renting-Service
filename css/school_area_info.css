@@ -19,6 +19,7 @@ h2 {
 .main-title h1 {
   padding-top: 40px;
   margin-right: 350px;
+  font-size: 2rem;
   border-bottom: 4px #eb0000 solid;
   cursor: pointer;
 }
