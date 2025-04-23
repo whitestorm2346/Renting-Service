@@ -403,7 +403,6 @@
   margin-bottom: 5rem;
 }
 
-
 .section-content span{
   white-space: nowrap;
   position: relative;
@@ -411,8 +410,7 @@
   color: red;
   font-weight: bold;
   font-size: 3rem;
-  animation: scroll-left 12s linear infinite;
-  padding-left: 25%;
+  animation: scroll-left 15s linear infinite;
   margin: 0;    
   
 }
@@ -429,7 +427,7 @@
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(0%);
+    transform: translateX(45%);
   }
   100% {
     transform: translateX(-100%);
@@ -446,8 +444,19 @@
 }
 
 .masked-list-container ul li {
-  padding: .5rem 1rem;
-  margin: 1rem 0;
   border-radius: 50rem;
-  background-color: #48b830;
+}
+
+.masked-list-container ul li a {
+  display: block;
+  padding: .75rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
+  border-radius: 50rem;
+  /* background-color set at rental_info.html text/js */
+}
+
+.masked-list-container ul li a:hover {
+  box-shadow: 0 0 7px rgb(39, 39, 39);
+  cursor: pointer;
 }

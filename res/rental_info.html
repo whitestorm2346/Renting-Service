@@ -141,45 +141,6 @@
           >，先付定金優先看房→這是詐騙！
         </span>
 
-        <div class="mask">
-          <svg width="100%" height="500">
-            <rect width="100%" height="500" rx="25" fill="#998CBA"/>
-
-             <mask id="mask-list">
-               <g transform="translate(0, 0)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 1</text>
-               </g>
-               <g transform="translate(0, 60)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 2</text>
-               </g>
-               <g transform="translate(0, 120)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 3</text>
-               </g>
-               <g transform="translate(0, 180)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 4</text>
-               </g>
-               <g transform="translate(0, 240)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 5</text>
-               </g>
-               <g transform="translate(0, 300)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 6</text>
-               </g>
-               <g transform="translate(0, 360)">
-                 <rect width="100%" height="50" rx="25" y="0" fill="#008CBA" />
-                 <text x="50" y="30" fill="white" font-size="18" font-family="Arial">按鈕 7</text>
-               </g>
-             </mask>
-
-             <rect width="100%" height="500" rx="25" fill="orange" mask="url(mask-list)"></rect>
-          </svg>
-        </div>
-
         <div class="masked-list-container">
           <ul id="masked-content">
             <li>
@@ -254,6 +215,39 @@
           arrows: true, // 顯示左右箭頭
           dots: true, // 顯示下方的點點
         });
+      });
+    </script>
+
+    <script type="text/javascript">
+      const topColor = "#ff9a9e";
+      const bottomColor = "#fad0c4";
+
+      function hexToRgb(hex) {
+        hex = hex.replace("#", "");
+        return {
+          r: parseInt(hex.slice(0, 2), 16),
+          g: parseInt(hex.slice(2, 4), 16),
+          b: parseInt(hex.slice(4, 6), 16),
+        };
+      }
+
+      function interpolateColor(color1, color2, t) {
+        const c1 = hexToRgb(color1);
+        const c2 = hexToRgb(color2);
+        const r = Math.round(c1.r + (c2.r - c1.r) * t);
+        const g = Math.round(c1.g + (c2.g - c1.g) * t);
+        const b = Math.round(c1.b + (c2.b - c1.b) * t);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      // 主邏輯
+      const listItems = document.querySelectorAll("#masked-content li");
+      const total = listItems.length;
+
+      listItems.forEach((li, index) => {
+        const t = index / (total - 1); // 正規化比例
+        const color = interpolateColor(topColor, bottomColor, t);
+        li.style.backgroundColor = color;
       });
     </script>
     <script src="../js/area_view.js"></script>

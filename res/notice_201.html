@@ -42,25 +42,25 @@
     <script>
       let lastHeight = 0;
 
-      function checkAndPostHeight() {
-        const currentHeight = document.documentElement.scrollHeight;
-        if (currentHeight !== lastHeight) {
-          lastHeight = currentHeight;
-          // console.log("高度變了:", currentHeight);
-          window.parent.postMessage(
-            { from: "iframeB", height: currentHeight },
-            "*"
-          );
+      window.addEventListener("message", (event) => {
+        if (event.data.from === "iframeC") {
+          const iframe = document.getElementById("frame_notice");
+          iframe.style.height = event.data.height + "px";
+
+          let currHeight = document.documentElement.scrollHeight;
+
+          if (currHeight !== lastHeight) {
+            lastHeight = currHeight;
+
+            console.log(`iframeB height: ${currHeight}`);
+
+            window.parent.postMessage(
+              { from: "iframeB", height: currHeight },
+              "*"
+            );
+          }
         }
-      }
-
-      // 初始載入時執行一次
-      window.addEventListener("load", () => {
-        checkAndPostHeight();
       });
-
-      // 定時檢查高度變化
-      setInterval(checkAndPostHeight, 300);
     </script>
   </body>
 </html>
