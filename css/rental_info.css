@@ -404,6 +404,33 @@
 }
 
 .section-content span{
+  font-size: 3rem;
+  color: red;
+  animation: blink-animation 0.5s infinite;
+  
+}
+@keyframes blink-animation {
+
+  0% {
+
+    opacity: 0.5;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    opacity: 0.5;
+
+  }
+
+}
+/*.section-content span{
   white-space: nowrap;
   position: relative;
   display: inline-block;
@@ -413,7 +440,7 @@
   animation: scroll-left 15s linear infinite;
   margin: 0;    
   
-}
+}*/
 
 .section-content span a{
   

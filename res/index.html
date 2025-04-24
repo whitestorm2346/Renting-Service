@@ -247,7 +247,7 @@
           var iframe = document.getElementById("frame_content");
           iframe.height =
             iframe.contentWindow.document.documentElement.scrollHeight;
-        } else if (event.data.from === "iframeA") {
+        } else if (event.data.from === "iframeA" || event.data.from === "iframeB") {
           const iframe = document.getElementById("frame_content");
           iframe.style.height = event.data.height + "px";
           console.log(iframe.style.height);
