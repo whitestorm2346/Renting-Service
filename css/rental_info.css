@@ -480,7 +480,8 @@
   margin: 1.5rem 0;
   font-size: 1.25rem;
   border-radius: 50rem;
-  /* background-color set at rental_info.html text/js */
+  color: #fff;
+  /* background-color set at rental_info.html text/javascript */
 }
 
 .masked-list-container ul li a:hover {
